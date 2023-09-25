@@ -1,0 +1,12 @@
+Id:
+7
+Designation:
+Scooter
+Current Battery:
+88
+Battery power:
+370
+Park maximum power:
+4000
+Number of vehicles charging:
+1

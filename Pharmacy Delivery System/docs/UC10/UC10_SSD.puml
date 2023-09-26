@@ -1,0 +1,27 @@
+@startuml
+autonumber
+
+
+actor "Administrator" as ADM
+
+participant ":System" as SYS
+
+activate ADM
+ADM -> SYS : begins the process of removing a courier
+activate SYS
+SYS --> ADM : asks the administrator to choose a courier
+deactivate SYS
+
+ADM -> SYS : selects the courier he wants to remove
+activate SYS
+SYS --> ADM : shows the data and asks for confirmation
+deactivate SYS
+
+ADM -> SYS : confirms
+activate SYS
+SYS --> ADM : operation successfully completed
+deactivate SYS
+
+deactivate ADM
+
+@enduml

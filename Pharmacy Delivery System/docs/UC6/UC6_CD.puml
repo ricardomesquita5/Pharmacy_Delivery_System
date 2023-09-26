@@ -1,0 +1,56 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class AddScooterUI {
+
+}
+
+class AddScooterController {
+  +List<Pharmacy> getPharmaciesList()
+  +getPharmacyByEmail(PharmacyEmail)
+  +newScooter(capacity,power,maxBattery)
+  +addScooter()
+}
+
+class PharmacyDB {
+  +List<Pharmacy> getAllPharmacies()
+  +Pharmacy getPharmacy(PharmacyEmail)
+}
+
+class Scooter {
+  -String id
+  -Double capacity
+  -Double power
+  -Double maxPower
+  -Integer battery
+  +Scooter(capacity,power,maxBattery)
+  +save(pharEmail)
+}
+
+class Pharmacy {
+  -String designation
+  -Adress adress
+  -Integer parkMax
+  +String getEmail()
+}
+
+class ScooterDB {
+  +addScooter(scooter,pharEmail)
+}
+
+class Administrator {
+  -String email
+}
+
+AddScooterUI ..> AddScooterController
+AddScooterController ..> PharmacyDB
+AddScooterController ..> Scooter
+AddScooterController ..> Pharmacy
+
+Administrator "1" --> "*" Scooter : add/remove/update
+
+Pharmacy "1" -- "*" Scooter : has >
+
+ScooterDB "1" -- "*" Scooter: saves >
+
+@enduml

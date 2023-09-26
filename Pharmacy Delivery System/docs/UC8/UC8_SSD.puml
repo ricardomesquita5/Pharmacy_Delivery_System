@@ -1,0 +1,33 @@
+@startuml
+autonumber
+actor "Administrator" as ADM
+
+activate ADM
+ADM -> ":System" : Starts the process update Scooter
+activate ":System"
+":System" --> ADM : Asks the Administrator for the Pharmacy that he wants update a scooter
+deactivate ":System"
+
+ADM -> ":System" : Selects the Pharmacy he wants update a scooter.
+activate ":System"
+":System" --> ADM : Asks the Administrator for the scooter he wants to update
+deactivate ":System"
+
+ADM -> ":System" : Selects the Scooter he wants to update
+activate ":System"
+":System" --> ADM : Asks for the necessary scooter's data (i.e. capacity (KG), power (W), max battery (W/H))
+deactivate ":System"
+
+ADM -> ":System" : Enters the requested data.
+activate ":System"
+":System" --> ADM : Displays the data, requesting confirmation to update the scooter
+deactivate ":System"
+
+ADM -> ":System" :  Confirms
+activate ":System"
+":System" --> ADM :  Informs about the success of the operation
+deactivate ":System"
+
+deactivate ADM
+
+@enduml

@@ -1,0 +1,31 @@
+@startuml
+
+autonumber
+
+actor "Administrator" as ADM
+
+activate ADM
+ADM -> ":System" : Starts the process of Creating a Delivery
+
+activate ":System"
+":System" --> ADM : Asks him to choose the Pharmacy he wants to add a delivery to
+deactivate ":System"
+
+ADM -> ":System" : Selects the Pharmacy
+activate ":System"
+":System" --> ADM : Asks for the orders he want to add to the delivery
+deactivate ":System"
+
+ADM -> ":System" : Enters the requested data
+activate ":System"
+":System" --> ADM : Displays the data, asking him to confirm it
+deactivate ":System"
+
+ADM -> ":System" :  Confirms
+activate ":System"
+":System" --> ADM :  Informs about the success of the operation
+deactivate ":System"
+
+deactivate ADM
+
+@enduml

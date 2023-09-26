@@ -1,0 +1,116 @@
+@startuml
+autonumber
+'hide footbox
+actor "Administrator" as ADM
+
+participant ":UpdateScooterUI" as UI
+participant ":UpdateController" as CTRL
+participant ":PharmacyDB" as PHARDB
+participant ":Scooter" as SCOOTER
+participant "phar\n:Pharmacy" as PHAR
+participant "scooter\n:Scooter" as OSCOOTER
+participant ":ScooterDB" as SCOOTERDB
+participant "pharmaciesList\n:List<Pharmacy>" as LPHAR
+participant "scootersList\n:List<Scooter>" as LSCOOTER
+
+activate ADM
+ADM -> UI : Starts the process update Scooter.
+activate UI
+
+UI -> CTRL : pharmaciesList = getPharmaciesList()
+activate CTRL
+
+CTRL -> PHARDB: pharmaciesList = geAllPharmacies()
+activate PHARDB
+deactivate PHARDB
+
+deactivate CTRL
+
+UI -> ADM : Shows to the Administrator a list of pharmacies and asks him to choose the one he wants update a scooter.
+deactivate UI
+
+ADM -> UI : Selects the Pharmacy he wants update a scooter.
+activate UI
+
+UI -> CTRL : getPharmacyByEmail(PharmacyEmail)
+activate CTRL
+
+CTRL -> PHARDB: phar = getPharmacy(PharmacyEmail)
+activate PHARDB
+deactivate PHARDB
+
+deactivate CTRL
+
+UI -> CTRL: scootersList = getScootersList()
+activate CTRL
+
+CTRL -> PHAR: pharEmail = getEmail()
+activate PHAR
+deactivate PHAR
+
+CTRL -> SCOOTERDB: scootersList = geAllScooters(pharEmail)
+activate SCOOTERDB
+deactivate SCOOTERDB
+
+deactivate CTRL
+
+UI -> ADM : Shows to the Administrator a list of scooters and asks him to choose the one he wants update.
+deactivate UI
+
+ADM -> UI : Selects the scooter he wants update.
+activate UI
+
+UI -> CTRL : getScooterByID(scooterID)
+activate CTRL
+
+CTRL -> SCOOTERDB: scooter = getScooter(scooterID)
+activate SCOOTERDB
+deactivate SCOOTERDB
+
+deactivate CTRL
+
+UI --> ADM : Asks for the necessary scooter's data (i.e. capacity (KG), power (W), max battery (W/H)).
+deactivate UI
+
+ADM -> UI : Enters the requested data.
+activate UI
+
+UI -> CTRL: changeScooter(capacity,power,maxBattery)
+activate CTRL
+
+CTRL -> OSCOOTER : setCapacity(Capacity)
+activate OSCOOTER
+deactivate OSCOOTER
+CTRL -> OSCOOTER : setPower(power)
+activate OSCOOTER
+deactivate OSCOOTER
+CTRL -> OSCOOTER : setMaxBattery(maxBattery)
+activate OSCOOTER
+deactivate OSCOOTER
+
+deactivate CTRL
+
+UI -> ADM:  Displays the data, requesting confirmation to update the scooter.
+deactivate CTRL
+deactivate UI
+
+ADM -> UI : Confirms
+activate UI
+UI -> CTRL : updateScooter()
+activate CTRL
+
+CTRL -> OSCOOTER : update()
+activate OSCOOTER
+
+OSCOOTER -> SCOOTERDB : update(scooter)
+activate SCOOTERDB
+deactivate SCOOTERDB
+deactivate OSCOOTER
+
+UI -> ADM : Informs about the success of the operation
+deactivate CTRL
+deactivate UI
+
+deactivate ADM
+
+@enduml

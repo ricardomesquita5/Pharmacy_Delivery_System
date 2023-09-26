@@ -1,0 +1,77 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class UserRegisterUI {
+
+}
+
+class UserRegisterController {
+  +newClient(name,email,password,street,postalCode,number,locality,gpsCoordinates,creditCardNumber,validityDate,ccv)
+  +addClient()
+  +getClientString
+}
+
+class ClientDB {
+  +Client getClient(userEmail)
+  +isClient(userEmail)
+}
+
+class Client {
+  -String email
+  -Address address
+  -long creditCardNumber
+  -Date validityDate
+  -Integer ccv
+  -Integer credits
+  +Client(name,email,password,address,creditCardNumber,validityDate,ccv)
+  +Client(name,email,password,address,creditCardNumber,validityDate,ccv,credits)
+  +save(getEmail)
+  +addCredits(credits,price)
+}
+
+class AddressDB {
+  +addAdress(Address add)
+}
+
+class Address {
+
+  -String street
+  -String postalCode
+  -Integer number
+  -String locality
+  -String GPSCoordinates
+
+  +Address(GPSCoordinates, street, postalCode, doorNumber, locality)
+  +save()
+}
+
+class User {
+  -String name
+  -String email
+  -String password
+  +User(name,email,password)
+  +save(email)
+  +getGetUser(email)
+  +remove(email)
+  +hasPassword(password)
+}
+
+class UserDB {
+  +User findUser(email,password)
+  +User getUser(email)
+  +addUser(user)
+  +removeUser(user)
+}
+
+UserRegisterUI ..> UserRegisterController
+UserRegisterController ..> ClientDB
+UserRegisterController ..> Client
+UserRegisterController ..> User
+UserRegisterController ..> UserDB
+UserRegisterController ..> AddressDB
+
+Client "0..1" -- "1" User : act as >
+Client "1" -- "1" Address : has >
+AddressDB "1" -- "*"Address : saves >
+
+@enduml

@@ -1,0 +1,83 @@
+@startuml
+autonumber
+'hide footbox
+actor "Administrator" as ADM
+
+participant ":UpdatePharmacyUI" as UI
+participant ":UpdatePharmacyController" as CTRL
+participant ":Pharmacy" as SCOOTER
+participant "phar\n:Pharmacy" as PHAR
+participant ":PharmacyDB" as PHARDB
+participant "pharmaciesList\n:List<Pharmacy>" as LPHAR
+
+activate ADM
+ADM -> UI : Starts the process of update a Pharmacy
+activate UI
+
+UI -> CTRL : pharmaciesList = getPharmaciesList()
+activate CTRL
+
+CTRL -> PHARDB: pharmaciesList = getAllPharmacies()
+activate PHARDB
+deactivate PHARDB
+
+deactivate CTRL
+
+UI -> ADM : Shows to the Administrator a list of pharmacies and asks him to choose the one he wants to update
+deactivate UI
+
+ADM -> UI : Selects the Pharmacy he wants to update
+activate UI
+
+UI -> CTRL : getPharmacyByEmail(PharmacyEmail)
+activate CTRL
+
+CTRL -> PHARDB: phar = getPharmacy(PharmacyEmail)
+activate PHARDB
+deactivate PHARDB
+
+deactivate CTRL
+
+
+
+deactivate CTRL
+
+UI --> ADM : Asks for the necessary data (park limit)
+deactivate UI
+
+ADM -> UI : Enters the requested data
+activate UI
+
+UI -> CTRL: changePharmacy(parkMax)
+activate CTRL
+
+CTRL -> PHAR : setParkMax(parkMax)
+activate PHAR
+deactivate PHAR
+
+deactivate CTRL
+
+UI -> ADM:  Displays the data, requesting confirmation to update the scooter.
+deactivate CTRL
+deactivate UI
+
+ADM -> UI : Confirms
+activate UI
+UI -> CTRL : updatePharmacy()
+activate CTRL
+
+CTRL -> PHAR : update()
+activate PHAR
+
+PHAR -> PHARDB : update(phar)
+activate PHARDB
+deactivate PHARDB
+deactivate PHAR
+
+UI -> ADM : Informs about the success of the operation
+deactivate CTRL
+deactivate UI
+
+deactivate ADM
+
+@enduml

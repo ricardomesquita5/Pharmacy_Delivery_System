@@ -1,0 +1,28 @@
+@startuml
+
+autonumber
+
+actor "Administrator" as ADM
+
+activate ADM
+ADM -> ":System" : Starts the process of updating a Pharmacy
+
+activate ":System"
+":System" --> ADM : Asks for the necessary data (park limit) and asks \n for the pharmacy he wants to update
+deactivate ":System"
+
+ADM -> ":System" : Enters the requested data
+activate ":System"
+
+":System" --> ADM : Displays the data, asking the Administrator to confirm it
+deactivate ":System"
+
+ADM -> ":System" : Confirms
+activate ":System"
+
+":System" --> ADM : Informs the Administrator about the success of the operation
+deactivate ":System"
+
+deactivate ADM
+
+@enduml

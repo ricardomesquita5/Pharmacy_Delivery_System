@@ -1,0 +1,133 @@
+@startuml
+
+hide methods
+left to right direction
+
+class Platform {
+  -String designation
+}
+
+class User {
+  -String name
+  -String email
+  -String password
+}
+
+class Administrator {
+  -String email
+}
+
+class Client {
+  -String name
+  -String email
+  -String creditCardNumber
+  -Date validityDate
+  -Integer ccv
+}
+
+class Pharmacy {
+  -String designation
+  -String email
+}
+
+class Address {
+  -String street
+  -String postalCode
+  -Integer number
+  -String locality
+  -String GPSCoordinates
+  -Integer elevation
+}
+
+class Order {
+  -Integer idOrder
+  -Double finalPrice
+}
+
+class Scooter {
+  -String id
+  -Double capacity
+  -Double power
+  -Double maxBattery
+  -Integer battery
+  -Double weight
+}
+
+class Drone {
+  -Integer id
+  -Double capacity
+  -Double power
+  -Double maxBattery
+  -Integer battery
+  -Double weight
+}
+
+class Product {
+  -String reference
+  -String name
+  -String description
+  -Double price
+  -Double weight
+}
+
+class Courier {
+  -Integer nif
+  -Integer phoneNumber
+  -Double socialSecurityNumber
+  -String status
+}
+
+class Delivery{
+  -Integer idDelivery
+}
+
+class Park {
+  -Integer id
+  -String designation
+  -Integer spotsCapacity
+  -Double powerCapacity
+  -Integer chargingScooters;
+}
+
+class Spot {
+  -Integer id
+  -String chargingSpot
+  -Integer idPark
+}
+
+Platform "1" -- "*" Administrator : has registered >
+Platform "1" -- "*" User : has registered >
+Platform "1" -- "1" Pharmacy : has registered >
+Platform "1" -- "*" Client : has registered >
+
+Administrator "0..1" -- "1" User : act as >
+Administrator "1" -- "1" Pharmacy : creates/manages >
+Administrator "1" -- "*" Scooter : add/remove/update >
+Administrator "1" -- "*" Product : add/remove/update >
+Administrator "1" -- "*" Drone : add/remove/update >
+Administrator "1" -- "*" Courier : manage >
+
+Pharmacy "1" -- "*" Product : has >
+Pharmacy "1" -- "1" Address : has >
+Pharmacy "1" -- "*" Park : has >
+Pharmacy "1" -- "*" Scooter : has >
+Pharmacy "1" -- "*" Drone : has >
+
+Park "1" -- "*" Spot : has >
+
+Courier "0..1" -- "1" User : act as >
+Courier "*" -- "1" Pharmacy : associated to >
+Courier "1" -- "*" Delivery :performs >
+
+Client "0..1" -- "1" User : act as >
+Client "1" -- "*" Product : buy >
+Client "1" -- "*" Order : performs >
+Client "1" -- "1" Address : has >
+
+Order "1" -- "*" Product : has >
+Order "1" -- "1" Address : has >
+
+Delivery "1" --"*" Order : has >
+Delivery "1" -- "1"Scooter : has >
+
+@enduml

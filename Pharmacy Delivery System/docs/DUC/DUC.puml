@@ -1,0 +1,68 @@
+@startuml
+
+usecase UC1 as "UC1 - Create Pharmacy"
+usecase UC2 as "UC2 - User Registration"
+usecase UC3 as "UC3 - Perform Order"
+usecase UC4 as "UC4 - Update Pharmacy"
+usecase UC5 as "UC5 - Product Delivery"
+usecase UC6 as "UC6 - Add Scooter"
+usecase UC7 as "UC7 - Remove Scooter"
+usecase UC8 as "UC8 - Update Scooter"
+usecase UC9 as "UC9 - Courier Registration"
+usecase UC10 as "UC10 - Remove Courier"
+usecase UC11 as "UC11 - Notify Client"
+usecase UC12 as "UC12 - Send Email to Courier"
+usecase UC13 as "UC13 - Add Product"
+usecase UC14 as "UC14 - Remove Product"
+usecase UC15 as "UC15 - Update Product"
+usecase UC16 as "UC16 - Parking the Scooter"
+usecase UC17 as "UC17 - Start Delivery By Scooter"
+usecase UC18 as "UC18 - Create Scooters/Drones Park"
+usecase UC19 as "UC19 - Search Product Nearby Pharmacies"
+usecase UC21 as "UC21 - Add Drone"
+usecase UC22 as "UC22 - Notify Client of Delivery"
+usecase UC24 as "UC24 - Update Drone"
+usecase UC25 as "UC25 - Finish Delivery By Scooter"
+usecase UC27 as "UC27 - Remove Drone"
+usecase UC28 as "UC28 - Parking the Drone"
+
+actor "Administrator" as ADM
+actor "Unregistered User" as NUSER
+actor "Client" as CLI
+actor "Courier" as COU
+actor "System" as SYS
+
+left to right direction
+
+ADM -->(UC1)
+ADM -->(UC4)
+ADM -->(UC5)
+ADM -->(UC6)
+ADM -->(UC7)
+ADM -->(UC8)
+ADM -->(UC9)
+ADM -->(UC10)
+ADM -->(UC13)
+ADM -->(UC14)
+ADM -->(UC15)
+ADM -->(UC18)
+ADM -->(UC21)
+ADM -->(UC24)
+ADM -->(UC27)
+ADM -->(UC28)
+
+
+NUSER -->(UC2)
+
+CLI -->(UC3)
+
+COU -->(UC16)
+COU -->(UC17)
+COU -->(UC25)
+
+SYS -->(UC11)
+SYS -->(UC12)
+SYS -->(UC19)
+SYS -->(UC22)
+
+@enduml

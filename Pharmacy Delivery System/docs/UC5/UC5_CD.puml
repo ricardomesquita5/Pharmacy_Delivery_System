@@ -1,0 +1,108 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class CreateDeliveryUI {
+
+}
+
+class DeliveryController {
+
+  +List<Pharmacy> getPharmaciesList()
+  +getPharmacyByEmail(PharmacyEmail)
+  +createGraphForScooterDeliveries()
+  +createDeliveryForScooter(orderList1, phar)
+  +createDeliveryForDrone(orderList1,phar)
+  +createDeliveryByDrone(drone,orderList1,phar)
+  +createDeliveryByScooter(phar,scooter,orderList1)
+  +getBatteryWasteForScooter(orderList1,phar,scooter)
+  +getBatteryWasteForDrone(orderList1,phar,drone)
+}
+
+class DeliveryByDrone {
+  -Integer deliveryByDroneId;
+  -String deliveryByDroneStatus;
+}
+
+class DeliveryByScooter {
+  -Integer deliveryByScooterId;
+  -String deliveryByScooterStatus;
+}
+
+class FileReader {
+
+  +getGraph()
+  +getCoordinatesGraph()
+}
+
+class DeliveryCreation {
+
+  +deliveryData(orderList1,graph,phar)
+  +deliveryDroneData(ordersList,graph,phar)
+}
+
+class PharmacyDB {
+  +List<Pharmacy> getAllPharmacies()
+  +Pharmacy getPharmacy(PharmacyEmail)
+}
+
+class Pharmacy {
+  -String designation
+  -String email
+
+  +String getEmail()
+}
+
+
+class Park {
+    -Integer id
+    -String designation
+    -Integer spotsCapacity
+    -Double powerCapacity
+}
+
+class ParkDB {
+
+}
+
+class Spot {
+    -Integer id
+    -String chargingSpot
+    -Integer idPark
+}
+
+class SpotDB {
+
+}
+
+class Administrator {
+  -String email
+}
+
+CreateDeliveryUI ..> DeliveryController
+DeliveryController ..> PharmacyDB
+DeliveryController ..> Pharmacy
+DeliveryController ..> Park
+DeliveryController ..> Spot
+DeliveryController ..> ParkDB
+DeliveryController ..> SpotDB
+DeliveryController ..> FileReader
+DeliveryController ..> DeliveryCreation
+
+Administrator "1" --> "*" DeliveryByScooter : creates
+
+Administrator "1" --> "*" DeliveryByDrone : creates
+
+Administrator "1" --> "*" Park : add
+
+Park "1" --> "*" Spot : has
+
+ParkDB "1" --> "*" Park : has
+
+SpotDB "1" --> "*" Spot : has
+
+PharmacyDB "1" --> "*" Pharmacy : has
+
+Pharmacy "1" --> "*" Park : has
+
+
+@enduml

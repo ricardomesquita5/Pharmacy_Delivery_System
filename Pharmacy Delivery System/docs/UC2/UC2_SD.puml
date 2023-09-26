@@ -1,0 +1,86 @@
+@startuml
+autonumber
+'hide footbox
+actor "Client" as CLI
+
+participant ":UserRegisterUI" as UI
+participant ":UserRegisterController" as CTRL
+participant ":Client" as CLIENT
+participant "client:Client" as C
+participant "add:Adress" as AD
+participant ":AdressDB" as ADDB
+participant ":ClientDB" as CLIDB
+participant "user:User" as USER
+participant ":UserDB" as USERDB
+
+activate CLI
+CLI -> UI : Starts the process of registering a User
+activate UI
+
+UI --> CLI : Asks for the necessary data that unequivocally characterizes \n the user that is being registered (name, email,password, address,\n credit card number,validity date and ccv)
+deactivate UI
+
+CLI -> UI : Enters the requested data
+activate UI
+
+UI -> CTRL : newClient(name,email,password,street,postalCode,doorNumber, \n locality,GPSCoordinates, credit card number,validity date and ccv)
+activate CTRL
+
+CTRL -> CLIENT: client = newClient(name,email,password,street,postalCode,doorNumber, \n locality,GPSCoordinates, credit card number,validity date and ccv)
+
+activate CLIENT
+
+CLIENT -> AD**: create(GPSCoordinates,street,postalCode,number,locality)
+CLIENT -> C**: create (name,email,password,address, creditCardNumber,validityDate,ccv)
+
+deactivate CTRL
+
+UI -> CTRL : newUser(name,email,password)
+deactivate CLIENT
+
+activate CTRL
+
+CTRL -> USER: user = newUser(name,email,password)
+activate USER
+
+deactivate USER
+deactivate CTRL
+USER -> USERDB: addUser(user)
+activate USERDB
+deactivate USERDB
+
+
+UI --> CLI : Displays the data, asking the User to confirm it
+deactivate UI
+
+CLI -> UI : Confirms the data
+activate UI
+
+UI -> CTRL : addClient()
+activate CTRL
+
+CTRL -> AD: save()
+activate AD
+
+AD -> ADDB: addAdress(add)
+activate ADDB
+deactivate ADDB
+
+deactivate AD
+
+
+CTRL -> C: save()
+activate C
+
+C -> CLIDB: addClient(client)
+activate CLIDB
+deactivate CLIDB
+deactivate CTRL
+deactivate C
+
+UI --> CLI: Informs the User about the success of the operation
+deactivate UI
+
+deactivate CLI
+
+@enduml

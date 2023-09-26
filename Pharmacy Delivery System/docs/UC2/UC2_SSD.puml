@@ -1,0 +1,22 @@
+@startuml
+autonumber
+actor "Unregistered User" as NUSER
+
+activate NUSER
+NUSER -> ":System" : Starts the process of registering a User
+activate ":System"
+":System" --> NUSER : Asks for the necessary data that unequivocally characterizes \n the user that is being registered (name, email,password, address,\n credit card number,validity date and ccv)
+deactivate ":System"
+
+NUSER -> ":System" : Enters the requested data
+activate ":System"
+":System" --> NUSER : Displays the data, asking the User to confirm it
+deactivate ":System"
+
+NUSER -> ":System" : Confirms the data
+activate ":System"
+":System" --> NUSER : Informs the User about the success of the operation
+deactivate ":System"
+
+deactivate NUSER
+@enduml

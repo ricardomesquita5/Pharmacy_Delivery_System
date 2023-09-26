@@ -1,0 +1,104 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class CreatePharmacyUI {
+
+}
+
+class CreatePharmacyController {
+
+  +newPharmacy(designation,email,street,postalCode,doorNumber,locality, \n gpsCoordinates,elevation,designationPark,spotsCapacity, powerCapacity,list)
+  +addPharmacy()
+}
+
+class Pharmacy {
+  -String designation
+  -String email
+
+  +Pharmacy(email,address,designation)
+  +save()
+  +String getEmail()
+}
+
+class PharmacyDB {
+
+  +addPharmacy(pharmacy)
+}
+
+class Address {
+
+  -String street
+  -String postalCode
+  -Integer number
+  -String locality
+  -String GPSCoordinates
+  -Integer elevation
+
+  +Address(gpsCoordinates,street,postalCode,number,locality,elevation)
+  +save()
+}
+
+class AddressDB {
+
+  +addAdress(address)
+}
+
+class Park {
+    -Integer id
+    -String designation
+    -Integer spotsCapacity
+    -Double powerCapacity
+    -Integer chargingScooters
+
+    +Park(designation, spotsCapacity, powerCapacity)
+    +save(pharEmail)
+}
+
+class ParkDB {
+
+  +addPark(park,pharEmail)
+  +getLastPark(pharEmail)
+}
+
+class Spot {
+    -Integer id
+    -String chargingSpot
+    -Integer idPark
+
+    +Spot(id, chargingSpot)
+    +save(id)
+}
+
+class SpotDB {
+  +addSpot(spot,id)
+}
+
+class Administrator {
+  -String email
+}
+
+CreatePharmacyUI ..> CreatePharmacyController
+CreatePharmacyController ..> PharmacyDB
+CreatePharmacyController ..> AddressDB
+CreatePharmacyController ..> Pharmacy
+CreatePharmacyController ..> Park
+CreatePharmacyController ..> ParkDB
+CreatePharmacyController ..> SpotDB
+
+Administrator "1" --> "*" Park : add
+
+Park "1" --> "*" Spot : has
+
+ParkDB "1" --> "*" Park : has
+
+SpotDB "1" --> "*" Spot : has
+
+AddressDB "1" -> "*" Address : has
+
+PharmacyDB "1" --> "*" Pharmacy : has
+
+Pharmacy "1" --> "1" Address : has
+Pharmacy "1" --> "*" Park : has
+
+
+@enduml

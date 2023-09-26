@@ -1,0 +1,61 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class AddCourierUI {
+
+}
+
+class AddCourierController {
+  +getPharmaciesList()
+  +getPharmacyByEmail(PharmacyEmail)
+  +newCourier(nif,name,email,phoneNumber,socialSecurityNumber,pwd)
+  +addCourier()
+}
+
+class PharmacyDB {
+  +getAllPharmacies()
+  +getPharmacy(PharmacyEmail)
+}
+
+class Pharmacy {
+
+  -String designation
+  -String email
+
+  +getEmail()
+}
+
+class Courier {
+  -Integer nif
+  -Integer phoneNumber
+  -Double socialSecurityNumber
+  -String status
+
+  +save(pharEmail)
+}
+
+class CourierDB {
+  +addCourier(courier,pharEmail)
+}
+
+class Administrator {
+
+  -String email
+}
+
+AddCourierUI ..> AddCourierController
+AddCourierController ..> Pharmacy
+AddCourierController ..> CourierDB
+
+Administrator "1" --> "*" Pharmacy : creates/manages
+Administrator "1" --> "*" Courier : manages
+
+Pharmacy "1" --> "*" Courier : has
+
+CourierDB "1" --> "*" Courier : has
+
+PharmacyDB "1" --> "*" Pharmacy : saves
+
+
+
+@enduml

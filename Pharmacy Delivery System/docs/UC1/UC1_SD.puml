@@ -1,0 +1,140 @@
+
+@startuml
+autonumber
+'hide footbox
+actor "Administrator" as ADM
+
+participant ":CreatePharmacyUI" as UI
+participant ":CreatePharmacyController" as CTRL
+participant ":Address" as AD
+participant ":Pharmacy" as SCOOTER
+participant ":Park" as PARK
+participant ":Spot" as SPOT
+participant "address\n:Address" as ADD
+participant "pharmacy:Pharmacy" as PHAR
+participant "park\n:Park" as PAR
+participant "spot\n:Spot" as OSSPOT
+participant ":AdressDB" as ADDB
+participant ":PharmacyDB" as PHARDB
+participant ":ParkDB" as PARKDB
+participant ":SpotDB" as SPOTDB
+participant "list\n:List<Integer>" as LISTT
+
+activate ADM
+ADM -> UI : Starts the process of creating a Pharmacy
+activate UI
+
+
+deactivate CTRL
+
+UI --> ADM : Asks for the necessary data for the pharmacy (designation, email, address information \n (gps coordinates, street, postal code, door number, locality, elevation)), asks for the necessary \n scooters park´s data that is going to be created too (spots capacity, power capacity) and also \n to select the spots that will allow to charge the scooters
+deactivate UI
+
+ADM -> UI : Enters the requested data
+activate UI
+
+UI -> CTRL : newPharmacy(designation,email,street,postalCode,doorNumber,locality, \n gpsCoordinates,elevation,designationPark,spotsCapacity, powerCapacity,list)
+activate CTRL
+
+CTRL -> AD : address = new Address(gpsCoordinates,street,postalCode,number,locality,elevation)
+activate AD
+AD -> ADD** : create(gpsCoordinates,street,postalCode,number,locality,elevation)
+deactivate AD
+
+CTRL -> SCOOTER: pharmacy = new Pharmacy(email,address,designation)
+activate SCOOTER
+SCOOTER -> PHAR**: create (email,add,designation,parkMax)
+deactivate SCOOTER
+
+CTRL -> PARK : park = new Park(designation, spotsCapacity, powerCapacity)
+activate PARK
+PARK -> PAR** : create(designationPark, spotsCapacity, powerCapacity)
+deactivate PARK
+deactivate CTRL
+
+UI --> ADM : Displays the data, asking the Administrator to confirm it
+deactivate UI
+
+ADM -> UI : Confirms
+activate UI
+
+UI -> CTRL : addPharmacy()
+activate CTRL
+
+CTRL -> AD: save()
+activate AD
+
+AD -> ADDB: addAdress(address)
+activate ADDB
+deactivate ADDB
+
+deactivate AD
+
+
+CTRL -> PHAR: save()
+activate PHAR
+
+PHAR -> PHARDB: addPharmacy(pharmacy)
+activate PHARDB
+deactivate PHARDB
+
+
+deactivate PHAR
+
+
+
+CTRL -> PHAR : pharEmail = getEmail()
+activate PHAR
+deactivate PHAR
+
+CTRL -> PAR : save(pharEmail)
+activate PAR
+
+PAR -> PARKDB : addPark(park,pharEmail)
+activate PARKDB
+deactivate PARKDB
+
+deactivate PAR
+
+CTRL -> PARKDB : id = getLastPark(pharEmail)
+activate PARKDB
+deactivate PARKDB
+
+loop [from one to the number inserted for spotsCapacity]
+
+OPT [ list.contains(i) ]
+
+CTRL -> SPOT : spot = new Spot(i,"no")
+activate SPOT
+SPOT -> OSSPOT** : create(id,chargingSpot)
+deactivate SPOT
+
+
+else
+
+CTRL -> SPOT : spot = new Spot(i,"yes")
+activate SPOT
+SPOT -> OSSPOT** : create(id,chargingSpot)
+deactivate SPOT
+
+end OPT
+
+CTRL -> OSSPOT : save(id)
+activate OSSPOT
+OSSPOT -> SPOTDB : addSpot(spot,id)
+activate SPOTDB
+deactivate SPOTDB
+deactivate OSSPOT
+
+end loop
+
+deactivate CTRL
+
+deactivate CTRL
+
+UI --> ADM:  Informs the Administrator about the success of the operation
+deactivate UI
+
+deactivate ADM
+
+@enduml

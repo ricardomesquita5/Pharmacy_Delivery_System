@@ -1,0 +1,123 @@
+@startuml
+autonumber
+'hide footbox
+actor "Administrator" as ADM
+
+participant ":RemoveCourierUI" as UI
+participant ":RemoveCourierController" as CTRL
+participant ":PharmacyDB" as PHARDB
+participant ":Courier" as COU
+participant "phar\n:Pharmacy" as PHAR
+participant "courier\n:Courier" as COU1
+participant ":CourierDB" as COUDB
+participant ":UserDB" as UDB
+participant "user\n:User" as U1
+participant "pharmaciesList\n:List<Pharmacy>" as LPHAR
+participant "couriersList\n:List<Product>" as LCOU
+
+activate ADM
+ADM -> UI : Starts the process of removing a courier.
+activate UI
+
+UI -> CTRL : pharmaciesList = getPharmaciesList()
+activate CTRL
+
+CTRL -> PHARDB: pharmaciesList = geAllPharmacies()
+activate PHARDB
+deactivate PHARDB
+
+deactivate CTRL
+
+UI --> ADM : Shows to the Administrator a list of pharmacies and asks him to choose the one he wants to remove a courier of.
+deactivate UI
+
+ADM -> UI : Selects the Pharmacy he wants to remove a courier of.
+activate UI
+
+UI -> CTRL : emailpharmacy=getEmailPharmacy(Pharmacy phar)
+
+activate CTRL
+
+CTRL -> PHAR: emailpharmacy = getEmail(email)
+activate PHAR
+deactivate PHAR
+deactivate CTRL
+
+UI -> CTRL : couriersList = getCourierList()
+activate CTRL
+
+CTRL -> COUDB: couriersList = getAllCouriersOfPharmacy()
+activate COUDB
+deactivate COUDB
+
+deactivate CTRL
+
+UI --> ADM : Shows to the Administrator a list of couriers and asks him to choose the one he wants to remove.
+deactivate UI
+
+ADM -> UI : Selects the courier he wants to remove.
+activate UI
+
+UI -> CTRL : getEmailCourier(Courier courier)
+activate CTRL
+
+CTRL ->COU: emailCourier = getEmailCourier(email)
+activate COU
+deactivate COU
+deactivate CTRL
+
+UI -> CTRL : getCourier(emailCourier)
+activate CTRL
+
+CTRL ->COUDB: courier = getCourier(emailCourier)
+activate COUDB
+deactivate COUDB
+deactivate CTRL
+
+
+UI -> CTRL : getUser(emailCourier)
+activate CTRL
+
+CTRL ->UDB: user = getUser(emailCourier)
+activate UDB
+deactivate UDB
+
+UI --> ADM:  Displays the data, asking him to confirm it.
+deactivate CTRL
+deactivate UI
+
+ADM -> UI : Confirms.
+activate UI
+UI -> CTRL : removeCourier()
+activate CTRL
+
+CTRL -> COU1 : remove()
+activate COU1
+
+COU1 -> COU1 : emailCourier = getEmail()
+
+COU1 -> COUDB : removeCourier(emailCourier)
+activate COUDB
+deactivate COUDB
+deactivate COU1
+deactivate CTRL
+
+UI -> CTRL : removeUser()
+activate CTRL
+
+CTRL -> U1 : remove()
+activate U1
+
+U1 -> U1 : email = getEmail()
+
+U1 -> UDB : removeUser(email)
+activate UDB
+deactivate UDB
+deactivate U1
+
+UI --> ADM : Informs about the success of the operation.
+deactivate CTRL
+deactivate UI
+
+deactivate ADM
+@enduml

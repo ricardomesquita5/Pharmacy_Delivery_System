@@ -1,0 +1,60 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class UpdatePharmacyUI {
+
+}
+
+class UpdatePharmacyController {
+
+  +getPharmaciesList()
+  +getPharmacyByEmail(PharmacyEmail)
+  +changePharmacy(parkMax)
+  +updatePharmacy()
+}
+
+class PharmacyDB {
+  
+  +getAllPharmacies()
+  +getPharmacy(PharmacyEmail)
+  +update(phar)
+}
+
+class Address {
+
+  -String street
+  -String postalCode
+  -Double number
+  -Double locality
+  -Double GPSCoordinates
+}
+
+class Pharmacy {
+
+  -String designation
+  -String email
+  -Integer parkMax
+
+  +setParkMax(parkMax)
+  +update()
+}
+
+class Administrator {
+
+  -String name
+  -String email
+}
+
+UpdatePharmacyUI ..> UpdatePharmacyController
+UpdatePharmacyController ..> Pharmacy
+UpdatePharmacyController ..> PharmacyDB
+
+Administrator "1" --> "1" Pharmacy : creates/manages
+
+PharmacyDB "1" --> "*" Pharmacy : saves
+
+Pharmacy "1" --> "1" Address : has
+
+
+
+@enduml

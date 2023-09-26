@@ -1,0 +1,66 @@
+@startuml
+
+hide methods
+left to right direction
+
+class Platform {
+  -String designation
+}
+
+class User {
+  -String name
+  -String email
+  -String password
+}
+
+class Administrator {
+  -String name
+  -String email
+}
+
+
+class Order {
+  -Double fee
+  -Integer credits
+}
+
+class Client {
+  -String name
+  -String email
+  -String creditCardNumber
+  -Date validityDate
+  -Integer ccv
+}
+
+class Product {
+  -String name
+  -String reference
+  -String description
+  -Double price
+  -Integer amount
+}
+
+class Address {
+  -String street
+  -String postalCode
+  -Integer number
+  -String locality
+  -String GPSCoordinates
+}
+
+Platform "1" -- "1" Administrator : has registered >
+Platform "1" -- "*" User : has registered >
+Platform "1" -- "*" Client : has registered >
+
+Administrator "0..1" -- "1" User : act as >
+Administrator "1" -- "*" Product : manage >
+
+Client "0..1" -- "1" User : act as >
+Client "1" -- "*" Product : buy >
+Client "1" -- "*" Order : performs >
+Client "1" -- "1" Address : has >
+
+Order "1" -- "*" Product : has >
+Order "1" -- "1" Address : has >
+
+@enduml

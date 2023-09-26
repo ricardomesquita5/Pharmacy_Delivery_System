@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1019px" preserveAspectRatio="none" style="width:818px;height:1019px;" version="1.1" viewBox="0 0 818 1019" width="818px" zoomAndPan="magnify">
+    <defs>
+        <filter height="300%" id="f1ab6tui9aod98" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0" />
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0" />
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3" />
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal" />
+        </filter>
+    </defs>
+    <g>
+        <!--class RemoveCourierUI-->
+        <rect fill="#FEFECE" filter="url(#f1ab6tui9aod98)" height="48" id="RemoveCourierUI" style="stroke: #A80036; stroke-width: 1.5;" width="131" x="382.5" y="8" />
+        <ellipse cx="397.5" cy="24" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;" />
+        <path d="M400.2656,19.875 Q400.4219,19.6563 400.6094,19.5469 Q400.7969,19.4375 401.0156,19.4375 Q401.3906,19.4375 401.625,19.6953 Q401.8594,19.9531 401.8594,20.5625 L401.8594,22.0156 Q401.8594,22.625 401.625,22.8906 Q401.3906,23.1563 401.0156,23.1563 Q400.6719,23.1563 400.4688,22.9531 Q400.2656,22.7656 400.1563,22.25 Q400.1094,21.8906 399.9219,21.7031 Q399.5938,21.3281 398.9844,21.1094 Q398.375,20.8906 397.75,20.8906 Q396.9844,20.8906 396.3516,21.2188 Q395.7188,21.5469 395.2266,22.2969 Q394.7344,23.0469 394.7344,24.0781 L394.7344,25.1719 Q394.7344,26.4063 395.625,27.2266 Q396.5156,28.0469 398.1094,28.0469 Q399.0469,28.0469 399.7031,27.7969 Q400.0938,27.6406 400.5156,27.2031 Q400.7813,26.9375 400.9297,26.8594 Q401.0781,26.7813 401.2813,26.7813 Q401.6094,26.7813 401.8672,27.0391 Q402.125,27.2969 402.125,27.6406 Q402.125,27.9844 401.7813,28.3906 Q401.2813,28.9688 400.4844,29.2969 Q399.4063,29.75 398.1094,29.75 Q396.5938,29.75 395.3906,29.125 Q394.4063,28.625 393.7188,27.5547 Q393.0313,26.4844 393.0313,25.2031 L393.0313,24.0469 Q393.0313,22.7188 393.6484,21.5703 Q394.2656,20.4219 395.3594,19.8047 Q396.4531,19.1875 397.6875,19.1875 Q398.4219,19.1875 399.0703,19.3516 Q399.7188,19.5156 400.2656,19.875 Z " /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="99" x="411.5" y="28.9102">RemoveCourierUI</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="383.5" x2="512.5" y1="40" y2="40" />
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="383.5" x2="512.5" y1="48" y2="48" />
+        <!--class RemoveCourierController-->
+        <rect fill="#FEFECE" filter="url(#f1ab6tui9aod98)" height="158.6875" id="RemoveCourierController" style="stroke: #A80036; stroke-width: 1.5;" width="206" x="345" y="117" />
+        <ellipse cx="374.85" cy="133" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;" />
+        <path d="M377.6156,128.875 Q377.7719,128.6563 377.9594,128.5469 Q378.1469,128.4375 378.3656,128.4375 Q378.7406,128.4375 378.975,128.6953 Q379.2094,128.9531 379.2094,129.5625 L379.2094,131.0156 Q379.2094,131.625 378.975,131.8906 Q378.7406,132.1563 378.3656,132.1563 Q378.0219,132.1563 377.8188,131.9531 Q377.6156,131.7656 377.5063,131.25 Q377.4594,130.8906 377.2719,130.7031 Q376.9438,130.3281 376.3344,130.1094 Q375.725,129.8906 375.1,129.8906 Q374.3344,129.8906 373.7016,130.2188 Q373.0688,130.5469 372.5766,131.2969 Q372.0844,132.0469 372.0844,133.0781 L372.0844,134.1719 Q372.0844,135.4063 372.975,136.2266 Q373.8656,137.0469 375.4594,137.0469 Q376.3969,137.0469 377.0531,136.7969 Q377.4438,136.6406 377.8656,136.2031 Q378.1313,135.9375 378.2797,135.8594 Q378.4281,135.7813 378.6313,135.7813 Q378.9594,135.7813 379.2172,136.0391 Q379.475,136.2969 379.475,136.6406 Q379.475,136.9844 379.1313,137.3906 Q378.6313,137.9688 377.8344,138.2969 Q376.7563,138.75 375.4594,138.75 Q373.9438,138.75 372.7406,138.125 Q371.7563,137.625 371.0688,136.5547 Q370.3813,135.4844 370.3813,134.2031 L370.3813,133.0469 Q370.3813,131.7188 370.9984,130.5703 Q371.6156,129.4219 372.7094,128.8047 Q373.8031,128.1875 375.0375,128.1875 Q375.7719,128.1875 376.4203,128.3516 Q377.0688,128.5156 377.6156,128.875 Z " /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="141" x="392.15" y="137.9102">RemoveCourierController</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="346" x2="550" y1="149" y2="149" />
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="346" x2="550" y1="157" y2="157" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="182" x="351" y="172.4189">+List&lt;Pharmacy&gt; getPharmaciesList()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="194" x="351" y="186.2549">+List&lt;Courier&gt; getCourierList(pharEmail)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="123" x="351" y="200.0908">+getCourier(emailCourier)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="111" x="351" y="213.9268">+getUser(emailCourier)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="174" x="351" y="227.7627">+getEmailPharmacy(Pharmacy phar)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="148" x="351" y="241.5986">+getEmailCourier(Courier cour)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="85" x="351" y="255.4346">+removeCourier()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="73" x="351" y="269.2705">+removeUser()</text>
+        <!--class PharmacyDB-->
+        <rect fill="#FEFECE" filter="url(#f1ab6tui9aod98)" height="75.6719" id="PharmacyDB" style="stroke: #A80036; stroke-width: 1.5;" width="212" x="6" y="350.5" />
+        <ellipse cx="71.75" cy="366.5" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;" />
+        <path d="M74.5156,362.375 Q74.6719,362.1563 74.8594,362.0469 Q75.0469,361.9375 75.2656,361.9375 Q75.6406,361.9375 75.875,362.1953 Q76.1094,362.4531 76.1094,363.0625 L76.1094,364.5156 Q76.1094,365.125 75.875,365.3906 Q75.6406,365.6563 75.2656,365.6563 Q74.9219,365.6563 74.7188,365.4531 Q74.5156,365.2656 74.4063,364.75 Q74.3594,364.3906 74.1719,364.2031 Q73.8438,363.8281 73.2344,363.6094 Q72.625,363.3906 72,363.3906 Q71.2344,363.3906 70.6016,363.7188 Q69.9688,364.0469 69.4766,364.7969 Q68.9844,365.5469 68.9844,366.5781 L68.9844,367.6719 Q68.9844,368.9063 69.875,369.7266 Q70.7656,370.5469 72.3594,370.5469 Q73.2969,370.5469 73.9531,370.2969 Q74.3438,370.1406 74.7656,369.7031 Q75.0313,369.4375 75.1797,369.3594 Q75.3281,369.2813 75.5313,369.2813 Q75.8594,369.2813 76.1172,369.5391 Q76.375,369.7969 76.375,370.1406 Q76.375,370.4844 76.0313,370.8906 Q75.5313,371.4688 74.7344,371.7969 Q73.6563,372.25 72.3594,372.25 Q70.8438,372.25 69.6406,371.625 Q68.6563,371.125 67.9688,370.0547 Q67.2813,368.9844 67.2813,367.7031 L67.2813,366.5469 Q67.2813,365.2188 67.8984,364.0703 Q68.5156,362.9219 69.6094,362.3047 Q70.7031,361.6875 71.9375,361.6875 Q72.6719,361.6875 73.3203,361.8516 Q73.9688,362.0156 74.5156,362.375 Z " /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="72" x="92.25" y="371.4102">PharmacyDB</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="217" y1="382.5" y2="382.5" />
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="217" y1="390.5" y2="390.5" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="177" x="12" y="405.9189">+List&lt;Pharmacy&gt; getAllPharmacies()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="200" x="12" y="419.7549">+Pharmacy getPharmacy(PharmacyEmail)</text>
+        <!--class CourierDB-->
+        <rect fill="#FEFECE" filter="url(#f1ab6tui9aod98)" height="89.5078" id="CourierDB" style="stroke: #A80036; stroke-width: 1.5;" width="267" x="324.5" y="768.5" />
+        <ellipse cx="424.75" cy="784.5" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;" />
+        <path d="M427.5156,780.375 Q427.6719,780.1563 427.8594,780.0469 Q428.0469,779.9375 428.2656,779.9375 Q428.6406,779.9375 428.875,780.1953 Q429.1094,780.4531 429.1094,781.0625 L429.1094,782.5156 Q429.1094,783.125 428.875,783.3906 Q428.6406,783.6563 428.2656,783.6563 Q427.9219,783.6563 427.7188,783.4531 Q427.5156,783.2656 427.4063,782.75 Q427.3594,782.3906 427.1719,782.2031 Q426.8438,781.8281 426.2344,781.6094 Q425.625,781.3906 425,781.3906 Q424.2344,781.3906 423.6016,781.7188 Q422.9688,782.0469 422.4766,782.7969 Q421.9844,783.5469 421.9844,784.5781 L421.9844,785.6719 Q421.9844,786.9063 422.875,787.7266 Q423.7656,788.5469 425.3594,788.5469 Q426.2969,788.5469 426.9531,788.2969 Q427.3438,788.1406 427.7656,787.7031 Q428.0313,787.4375 428.1797,787.3594 Q428.3281,787.2813 428.5313,787.2813 Q428.8594,787.2813 429.1172,787.5391 Q429.375,787.7969 429.375,788.1406 Q429.375,788.4844 429.0313,788.8906 Q428.5313,789.4688 427.7344,789.7969 Q426.6563,790.25 425.3594,790.25 Q423.8438,790.25 422.6406,789.625 Q421.6563,789.125 420.9688,788.0547 Q420.2813,786.9844 420.2813,785.7031 L420.2813,784.5469 Q420.2813,783.2188 420.8984,782.0703 Q421.5156,780.9219 422.6094,780.3047 Q423.7031,779.6875 424.9375,779.6875 Q425.6719,779.6875 426.3203,779.8516 Q426.9688,780.0156 427.5156,780.375 Z " /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="58" x="445.25" y="789.4102">CourierDB</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="325.5" x2="590.5" y1="800.5" y2="800.5" />
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="325.5" x2="590.5" y1="808.5" y2="808.5" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="255" x="330.5" y="823.9189">+List&lt;Courier&gt; getAllCouriersOfPharmacy(pharEmail)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="123" x="330.5" y="837.7549">+getCourier(emailCourier)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="144" x="330.5" y="851.5908">+removeCourier(emailCourier)</text>
+        <!--class UserDB-->
+        <rect fill="#FEFECE" filter="url(#f1ab6tui9aod98)" height="75.6719" id="UserDB" style="stroke: #A80036; stroke-width: 1.5;" width="123" x="320.5" y="933" />
+        <ellipse cx="356.65" cy="949" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;" />
+        <path d="M359.4156,944.875 Q359.5719,944.6563 359.7594,944.5469 Q359.9469,944.4375 360.1656,944.4375 Q360.5406,944.4375 360.775,944.6953 Q361.0094,944.9531 361.0094,945.5625 L361.0094,947.0156 Q361.0094,947.625 360.775,947.8906 Q360.5406,948.1563 360.1656,948.1563 Q359.8219,948.1563 359.6188,947.9531 Q359.4156,947.7656 359.3063,947.25 Q359.2594,946.8906 359.0719,946.7031 Q358.7438,946.3281 358.1344,946.1094 Q357.525,945.8906 356.9,945.8906 Q356.1344,945.8906 355.5016,946.2188 Q354.8688,946.5469 354.3766,947.2969 Q353.8844,948.0469 353.8844,949.0781 L353.8844,950.1719 Q353.8844,951.4063 354.775,952.2266 Q355.6656,953.0469 357.2594,953.0469 Q358.1969,953.0469 358.8531,952.7969 Q359.2438,952.6406 359.6656,952.2031 Q359.9313,951.9375 360.0797,951.8594 Q360.2281,951.7813 360.4313,951.7813 Q360.7594,951.7813 361.0172,952.0391 Q361.275,952.2969 361.275,952.6406 Q361.275,952.9844 360.9313,953.3906 Q360.4313,953.9688 359.6344,954.2969 Q358.5563,954.75 357.2594,954.75 Q355.7438,954.75 354.5406,954.125 Q353.5563,953.625 352.8688,952.5547 Q352.1813,951.4844 352.1813,950.2031 L352.1813,949.0469 Q352.1813,947.7188 352.7984,946.5703 Q353.4156,945.4219 354.5094,944.8047 Q355.6031,944.1875 356.8375,944.1875 Q357.5719,944.1875 358.2203,944.3516 Q358.8688,944.5156 359.4156,944.875 Z " /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="44" x="375.35" y="953.9102">UserDB</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="321.5" x2="442.5" y1="965" y2="965" />
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="321.5" x2="442.5" y1="973" y2="973" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="111" x="326.5" y="988.4189">+getUser(emailCourier)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="97" x="326.5" y="1002.2549">+removeUser(email)</text>
+        <!--class User-->
+        <rect fill="#FEFECE" filter="url(#f1ab6tui9aod98)" height="117.1797" id="User" style="stroke: #A80036; stroke-width: 1.5;" width="97" x="626.5" y="755" />
+        <ellipse cx="658.6" cy="771" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;" />
+        <path d="M661.3656,766.875 Q661.5219,766.6563 661.7094,766.5469 Q661.8969,766.4375 662.1156,766.4375 Q662.4906,766.4375 662.725,766.6953 Q662.9594,766.9531 662.9594,767.5625 L662.9594,769.0156 Q662.9594,769.625 662.725,769.8906 Q662.4906,770.1563 662.1156,770.1563 Q661.7719,770.1563 661.5688,769.9531 Q661.3656,769.7656 661.2563,769.25 Q661.2094,768.8906 661.0219,768.7031 Q660.6938,768.3281 660.0844,768.1094 Q659.475,767.8906 658.85,767.8906 Q658.0844,767.8906 657.4516,768.2188 Q656.8188,768.5469 656.3266,769.2969 Q655.8344,770.0469 655.8344,771.0781 L655.8344,772.1719 Q655.8344,773.4063 656.725,774.2266 Q657.6156,775.0469 659.2094,775.0469 Q660.1469,775.0469 660.8031,774.7969 Q661.1938,774.6406 661.6156,774.2031 Q661.8813,773.9375 662.0297,773.8594 Q662.1781,773.7813 662.3813,773.7813 Q662.7094,773.7813 662.9672,774.0391 Q663.225,774.2969 663.225,774.6406 Q663.225,774.9844 662.8813,775.3906 Q662.3813,775.9688 661.5844,776.2969 Q660.5063,776.75 659.2094,776.75 Q657.6938,776.75 656.4906,776.125 Q655.5063,775.625 654.8188,774.5547 Q654.1313,773.4844 654.1313,772.2031 L654.1313,771.0469 Q654.1313,769.7188 654.7484,768.5703 Q655.3656,767.4219 656.4594,766.8047 Q657.5531,766.1875 658.7875,766.1875 Q659.5219,766.1875 660.1703,766.3516 Q660.8188,766.5156 661.3656,766.875 Z " /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="27" x="676.4" y="775.9102">User</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="627.5" x2="722.5" y1="787" y2="787" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="61" x="632.5" y="802.4189">-String name</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="59" x="632.5" y="816.2549">-String email</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="85" x="632.5" y="830.0908">-String password</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="627.5" x2="722.5" y1="836.5078" y2="836.5078" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="50" x="632.5" y="851.9268">+remove()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="53" x="632.5" y="865.7627">+getEmail()</text>
+        <!--class Courier-->
+        <rect fill="#FEFECE" filter="url(#f1ab6tui9aod98)" height="158.6875" id="Courier" style="stroke: #A80036; stroke-width: 1.5;" width="157" x="475.5" y="518" />
+        <ellipse cx="529.25" cy="534" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;" />
+        <path d="M532.0156,529.875 Q532.1719,529.6563 532.3594,529.5469 Q532.5469,529.4375 532.7656,529.4375 Q533.1406,529.4375 533.375,529.6953 Q533.6094,529.9531 533.6094,530.5625 L533.6094,532.0156 Q533.6094,532.625 533.375,532.8906 Q533.1406,533.1563 532.7656,533.1563 Q532.4219,533.1563 532.2188,532.9531 Q532.0156,532.7656 531.9063,532.25 Q531.8594,531.8906 531.6719,531.7031 Q531.3438,531.3281 530.7344,531.1094 Q530.125,530.8906 529.5,530.8906 Q528.7344,530.8906 528.1016,531.2188 Q527.4688,531.5469 526.9766,532.2969 Q526.4844,533.0469 526.4844,534.0781 L526.4844,535.1719 Q526.4844,536.4063 527.375,537.2266 Q528.2656,538.0469 529.8594,538.0469 Q530.7969,538.0469 531.4531,537.7969 Q531.8438,537.6406 532.2656,537.2031 Q532.5313,536.9375 532.6797,536.8594 Q532.8281,536.7813 533.0313,536.7813 Q533.3594,536.7813 533.6172,537.0391 Q533.875,537.2969 533.875,537.6406 Q533.875,537.9844 533.5313,538.3906 Q533.0313,538.9688 532.2344,539.2969 Q531.1563,539.75 529.8594,539.75 Q528.3438,539.75 527.1406,539.125 Q526.1563,538.625 525.4688,537.5547 Q524.7813,536.4844 524.7813,535.2031 L524.7813,534.0469 Q524.7813,532.7188 525.3984,531.5703 Q526.0156,530.4219 527.1094,529.8047 Q528.2031,529.1875 529.4375,529.1875 Q530.1719,529.1875 530.8203,529.3516 Q531.4688,529.5156 532.0156,529.875 Z " /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="41" x="549.75" y="538.9102">Courier</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="476.5" x2="631.5" y1="550" y2="550" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="61" x="481.5" y="565.4189">-String name</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="59" x="481.5" y="579.2549">-String email</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="107" x="481.5" y="593.0908">-Integer phoneNumber</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="145" x="481.5" y="606.9268">-Integer socialSecurityNumber</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="52" x="481.5" y="620.7627">-Integer nif</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="65" x="481.5" y="634.5986">-String status</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="476.5" x2="631.5" y1="641.0156" y2="641.0156" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="50" x="481.5" y="656.4346">+remove()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="84" x="481.5" y="670.2705">+String getEmail()</text>
+        <!--class Pharmacy-->
+        <rect fill="#FEFECE" filter="url(#f1ab6tui9aod98)" height="103.3438" id="Pharmacy" style="stroke: #A80036; stroke-width: 1.5;" width="102" x="607" y="337" />
+        <ellipse cx="628.75" cy="353" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;" />
+        <path d="M631.5156,348.875 Q631.6719,348.6563 631.8594,348.5469 Q632.0469,348.4375 632.2656,348.4375 Q632.6406,348.4375 632.875,348.6953 Q633.1094,348.9531 633.1094,349.5625 L633.1094,351.0156 Q633.1094,351.625 632.875,351.8906 Q632.6406,352.1563 632.2656,352.1563 Q631.9219,352.1563 631.7188,351.9531 Q631.5156,351.7656 631.4063,351.25 Q631.3594,350.8906 631.1719,350.7031 Q630.8438,350.3281 630.2344,350.1094 Q629.625,349.8906 629,349.8906 Q628.2344,349.8906 627.6016,350.2188 Q626.9688,350.5469 626.4766,351.2969 Q625.9844,352.0469 625.9844,353.0781 L625.9844,354.1719 Q625.9844,355.4063 626.875,356.2266 Q627.7656,357.0469 629.3594,357.0469 Q630.2969,357.0469 630.9531,356.7969 Q631.3438,356.6406 631.7656,356.2031 Q632.0313,355.9375 632.1797,355.8594 Q632.3281,355.7813 632.5313,355.7813 Q632.8594,355.7813 633.1172,356.0391 Q633.375,356.2969 633.375,356.6406 Q633.375,356.9844 633.0313,357.3906 Q632.5313,357.9688 631.7344,358.2969 Q630.6563,358.75 629.3594,358.75 Q627.8438,358.75 626.6406,358.125 Q625.6563,357.625 624.9688,356.5547 Q624.2813,355.4844 624.2813,354.2031 L624.2813,353.0469 Q624.2813,351.7188 624.8984,350.5703 Q625.5156,349.4219 626.6094,348.8047 Q627.7031,348.1875 628.9375,348.1875 Q629.6719,348.1875 630.3203,348.3516 Q630.9688,348.5156 631.5156,348.875 Z " /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="55" x="644.25" y="357.9102">Pharmacy</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="608" x2="708" y1="369" y2="369" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="90" x="613" y="384.4189">-String designation</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="77" x="613" y="398.2549">-Adress adress</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="81" x="613" y="412.0908">-Integer parkMax</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="608" x2="708" y1="418.5078" y2="418.5078" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="84" x="613" y="433.9268">+String getEmail()</text>
+        <!--class Administrator-->
+        <rect fill="#FEFECE" filter="url(#f1ab6tui9aod98)" height="61.8359" id="Administrator" style="stroke: #A80036; stroke-width: 1.5;" width="105" x="395.5" y="357.5" />
+        <ellipse cx="410.5" cy="373.5" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;" />
+        <path d="M413.2656,369.375 Q413.4219,369.1563 413.6094,369.0469 Q413.7969,368.9375 414.0156,368.9375 Q414.3906,368.9375 414.625,369.1953 Q414.8594,369.4531 414.8594,370.0625 L414.8594,371.5156 Q414.8594,372.125 414.625,372.3906 Q414.3906,372.6563 414.0156,372.6563 Q413.6719,372.6563 413.4688,372.4531 Q413.2656,372.2656 413.1563,371.75 Q413.1094,371.3906 412.9219,371.2031 Q412.5938,370.8281 411.9844,370.6094 Q411.375,370.3906 410.75,370.3906 Q409.9844,370.3906 409.3516,370.7188 Q408.7188,371.0469 408.2266,371.7969 Q407.7344,372.5469 407.7344,373.5781 L407.7344,374.6719 Q407.7344,375.9063 408.625,376.7266 Q409.5156,377.5469 411.1094,377.5469 Q412.0469,377.5469 412.7031,377.2969 Q413.0938,377.1406 413.5156,376.7031 Q413.7813,376.4375 413.9297,376.3594 Q414.0781,376.2813 414.2813,376.2813 Q414.6094,376.2813 414.8672,376.5391 Q415.125,376.7969 415.125,377.1406 Q415.125,377.4844 414.7813,377.8906 Q414.2813,378.4688 413.4844,378.7969 Q412.4063,379.25 411.1094,379.25 Q409.5938,379.25 408.3906,378.625 Q407.4063,378.125 406.7188,377.0547 Q406.0313,375.9844 406.0313,374.7031 L406.0313,373.5469 Q406.0313,372.2188 406.6484,371.0703 Q407.2656,369.9219 408.3594,369.3047 Q409.4531,368.6875 410.6875,368.6875 Q411.4219,368.6875 412.0703,368.8516 Q412.7188,369.0156 413.2656,369.375 Z " /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="73" x="424.5" y="378.4102">Administrator</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="396.5" x2="499.5" y1="389.5" y2="389.5" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="59" x="401.5" y="404.9189">-String email</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="396.5" x2="499.5" y1="411.3359" y2="411.3359" />
+        <!--link RemoveCourierUI to RemoveCourierController-->
+        <path d="M448,56.282 C448,71.088 448,91.251 448,111.634 " fill="none" id="RemoveCourierUI-RemoveCourierController" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;" />
+        <polygon fill="#A80036" points="448,116.818,452,107.818,448,111.818,444,107.818,448,116.818" style="stroke: #A80036; stroke-width: 1.0;" />
+        <!--link RemoveCourierController to PharmacyDB-->
+        <path d="M344.865,251.114 C312.662,268.257 277.159,287.574 245,306 C221.98,319.19 197.101,334.22 175.157,347.751 " fill="none" id="RemoveCourierController-PharmacyDB" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;" />
+        <polygon fill="#A80036" points="170.809,350.436,180.5683,349.1106,175.0632,347.8089,176.3649,342.3038,170.809,350.436" style="stroke: #A80036; stroke-width: 1.0;" />
+        <!--link RemoveCourierController to Courier-->
+        <path d="M493.001,276.03 C502.545,295.449 511.644,316.559 518,337 C535.757,394.107 544.77,461.007 549.337,512.577 " fill="none" id="RemoveCourierController-Courier" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;" />
+        <polygon fill="#A80036" points="549.792,517.835,553.0005,508.5234,549.3606,512.8536,545.0304,509.2137,549.792,517.835" style="stroke: #A80036; stroke-width: 1.0;" />
+        <!--link RemoveCourierController to Pharmacy-->
+        <path d="M546.436,276.211 C557.927,286.042 569.341,296.117 580,306 C589.048,314.389 598.366,323.585 607.274,332.683 " fill="none" id="RemoveCourierController-Pharmacy" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;" />
+        <polygon fill="#A80036" points="611.064,336.573,607.6476,327.3357,607.5745,332.9921,601.9181,332.9189,611.064,336.573" style="stroke: #A80036; stroke-width: 1.0;" />
+        <!--link RemoveCourierController to CourierDB-->
+        <path d="M400.6,276.211 C391.272,295.449 382.871,316.433 378,337 C341.553,490.899 402.473,676.622 436.898,763.376 " fill="none" id="RemoveCourierController-CourierDB" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;" />
+        <polygon fill="#A80036" points="438.821,768.189,439.1987,758.3474,436.967,763.5454,431.769,761.3138,438.821,768.189" style="stroke: #A80036; stroke-width: 1.0;" />
+        <!--link RemoveCourierController to UserDB-->
+        <path d="M344.782,260.798 C305.946,292.998 271,336.219 271,387.5 C271,387.5 271,387.5 271,814.5 C271,859.576 302.28,900.615 331.631,929.2009 " fill="none" id="RemoveCourierController-UserDB" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;" />
+        <polygon fill="#A80036" points="335.569,932.9752,331.8391,923.8599,331.9592,929.5155,326.3036,929.6356,335.569,932.9752" style="stroke: #A80036; stroke-width: 1.0;" />
+        <!--link RemoveCourierController to User-->
+        <path d="M551.006,220.071 C613.637,239.68 688.707,275.04 727,337 C806.857,466.212 746.052,653.528 704.823,749.953 " fill="none" id="RemoveCourierController-User" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;" />
+        <polygon fill="#A80036" points="702.752,754.758,709.9872,748.0757,704.7307,750.1662,702.6403,744.9098,702.752,754.758" style="stroke: #A80036; stroke-width: 1.0;" />
+        <!--link Courier to CourierDB-->
+        <path d="M518.662,677.274 C505.677,706.22 491.36,738.134 479.898,763.686 " fill="none" id="Courier-CourierDB" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;" />
+        <polygon fill="#A80036" points="477.792,768.381,485.1247,761.8059,479.8381,763.8188,477.8251,758.5322,477.792,768.381" style="stroke: #A80036; stroke-width: 1.0;" />
+        <!--link User to UserDB-->
+        <path d="M626.194,859.866 C620.578,864.215 614.786,868.355 609,872 C558.259,903.961 495.297,930.2239 448.563,947.4893 " fill="none" id="User-UserDB" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;" />
+        <polygon fill="#A80036" points="443.807,949.2362,453.6343,949.8873,448.5003,947.512,450.8756,942.378,443.807,949.2362" style="stroke: #A80036; stroke-width: 1.0;" />
+        <!--link Administrator to Courier-->
+        <path d="M457.604,419.925 C464.301,439.749 473.988,465.934 485,488 C489.163,496.342 493.804,504.851 498.657,513.248 " fill="none" id="Administrator-Courier" style="stroke: #A80036; stroke-width: 1.0;" />
+        <polygon fill="#A80036" points="501.373,517.901,500.2919,508.1117,498.853,513.5825,493.3822,512.1436,501.373,517.901" style="stroke: #A80036; stroke-width: 1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="41" x="486" y="484.4951">remove</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="451.7294" y="440.7366">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="5" x="491.1187" y="507.0785">*</text>
+        <!--link Pharmacy to Courier-->
+        <path d="M632.559,440.138 C620.832,463.478 606.643,491.72 593.568,517.745 " fill="none" id="Pharmacy-Courier" style="stroke: #A80036; stroke-width: 1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="21" x="616" y="484.4951">has</text>
+        <polygon fill="#000000" points="622,493.3516,625,499.3516,628,493.3516,622,493.3516" style="stroke: #000000; stroke-width: 1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="621.4892" y="462.0203">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="5" x="591.9852" y="507.1808">*</text>
+        <!--link Courier to User-->
+        <path d="M598.54,677.274 C613.096,703.016 628.978,731.106 642.477,754.98 " fill="none" id="Courier-User" style="stroke: #A80036; stroke-width: 1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="10" x="626.5" y="721.4951">is</text>
+        <polygon fill="#000000" points="627,730.3516,630,736.3516,633,730.3516,627,730.3516" style="stroke: #000000; stroke-width: 1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="594.9386" y="698.0654">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="630.8616" y="743.9633">1</text>
+        <!--
+@startuml
+skinparam classAttributeIconSize 0
+
+class RemoveCourierUI {
+
+}
+
+class RemoveCourierController {
+  +List<Pharmacy> getPharmaciesList()
+  +List<Courier> getCourierList(pharEmail)
+  +getCourier(emailCourier)
+  +getUser(emailCourier)
+  +getEmailPharmacy(Pharmacy phar)
+  +getEmailCourier(Courier cour)
+  +removeCourier()
+  +removeUser()
+}
+
+class PharmacyDB {
+  +List<Pharmacy> getAllPharmacies()
+  +Pharmacy getPharmacy(PharmacyEmail)
+}
+
+class CourierDB {
+  +List<Courier> getAllCouriersOfPharmacy(pharEmail)
+  +getCourier(emailCourier)
+  +removeCourier(emailCourier)
+}
+
+class UserDB{
+    +getUser(emailCourier)
+    +removeUser(email)
+}
+
+class User{
+    -String name
+    -String email
+    -String password
+    +remove()
+    +getEmail()
+}
+
+class Courier {
+  -String name
+  -String email
+  -Integer phoneNumber
+  -Integer socialSecurityNumber
+  -Integer nif
+  -String status
+  +remove()
+  +String getEmail()
+}
+
+class Pharmacy {
+  -String designation
+  -Adress adress
+  -Integer parkMax
+  +String getEmail()
+}
+
+class Administrator {
+  -String email
+}
+
+RemoveCourierUI ..> RemoveCourierController
+RemoveCourierController ..> PharmacyDB
+RemoveCourierController ..> Courier
+RemoveCourierController ..> Pharmacy
+RemoveCourierController ..> CourierDB
+RemoveCourierController ..> UserDB
+RemoveCourierController ..> User
+Courier ..> CourierDB
+User ..> UserDB
+
+Administrator "1" - -> "*" Courier : remove
+
+Pharmacy "1" - - "*" Courier : has >
+
+Courier "1" - - "1" User :is >
+
+@enduml
+
+PlantUML version 1.2018.14(Fri Dec 21 16:33:16 GMT 2018)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_251-b08
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+-->
+    </g>
+</svg>

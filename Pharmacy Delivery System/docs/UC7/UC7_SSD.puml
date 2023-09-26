@@ -1,0 +1,28 @@
+@startuml
+autonumber
+actor "Administrator" as ADM
+
+activate ADM
+ADM -> ":System" : Starts the process remove Scooter
+activate ":System"
+":System" --> ADM : Asks the Administrator for the Pharmacy that he wants remove a scooter
+deactivate ":System"
+
+ADM -> ":System" : Selects the Pharmacy he wants remove a scooter.
+activate ":System"
+":System" --> ADM : Asks the Administrator for the scooter he wants to remove
+deactivate ":System"
+
+ADM -> ":System" : Selects the Scooter he wants to remove
+activate ":System"
+":System" --> ADM : Displays the data, requesting confirmation to remove the scooter
+deactivate ":System"
+
+ADM -> ":System" :  Confirms
+activate ":System"
+":System" --> ADM :  Informs about the success of the operation
+deactivate ":System"
+
+deactivate ADM
+
+@enduml

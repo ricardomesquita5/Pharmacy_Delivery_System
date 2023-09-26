@@ -1,0 +1,109 @@
+@startuml
+
+hide methods
+left to right direction
+
+class Platform {
+  -String designation
+}
+
+class User {
+  -String name
+  -String email
+  -String password
+}
+
+class Courier {
+  -String name
+  -String email
+  -Integer phoneNumber
+  -Integer socialSecurityNumber
+  -Integer nif
+}
+
+class Order {
+  -Double distance
+}
+
+class Client {
+  -String name
+  -String email
+  -String creditCardNumber
+  -Date validityDate
+  -Integer ccv
+}
+
+class Product {
+  -String name
+  -String reference
+  -String description
+  -Double price
+  -Integer amount
+}
+
+class Scooter {
+  -String id
+  -Double capacity
+  -Double power
+  -Double maxPower
+  -Integer battery
+}
+
+class Administrator {
+  -String email
+}
+
+class Pharmacy {
+  -String designation
+  -String email
+}
+
+class Address {
+  -String street
+  -String postalCode
+  -Integer number
+  -String locality
+  -String GPSCoordinates
+}
+
+class Drone {
+  -String id
+  -Double capacity
+  -Double power
+  -Double maxPower
+  -Integer battery
+}
+
+class Delivery {
+
+  -Integer id
+
+}
+
+Platform "1" -- "*" User : has registered >
+Platform "1" -- "1" Pharmacy : has registered >
+Platform "1" -- "*" Client : has registered >
+
+Client "1" -- "*" Product : buy >
+Client "1" -- "*" Order : performs >
+Client "1" -- "1" Address : has >
+
+Order "1" -- "*" Product : has >
+Order "1" -- "1" Address : has >
+
+Delivery "1" -- "*" Order : has >
+
+Pharmacy "1" -- "*" Product : has >
+
+Courier "*" -- "1" Pharmacy : associated to >
+Courier "1" -- "*" Delivery : does >
+
+Pharmacy "1" -- "1" Address : has >
+Pharmacy "1" -- "*" Scooter : has >
+Pharmacy "1" -- "*" Drone : has >
+
+Administrator "0..1" -- "1" User : act as >
+Administrator "1" -- "*" Delivery : creates >
+
+
+@enduml

@@ -1,0 +1,89 @@
+@startuml
+autonumber
+'hide footbox
+actor "Administrator" as ADM
+
+participant ":RemoveProductUI" as UI
+participant ":RemoveProductController" as CTRL
+participant ":PharmacyDB" as PHARDB
+participant ":Product" as PRODUCT
+participant "phar\n:Pharmacy" as PHAR
+participant "product\n:Product" as OPRODUCT
+participant ":ProductDB" as PRODUCTDB
+participant "pharmaciesList\n:List<Pharmacy>" as LPHAR
+participant "productsList\n:List<Product>" as LPRO
+
+activate ADM
+ADM -> UI : Starts the process remove a product.
+activate UI
+
+UI -> CTRL : pharmaciesList = getPharmaciesList()
+activate CTRL
+
+CTRL -> PHARDB: pharmaciesList = geAllPharmacies()
+activate PHARDB
+deactivate PHARDB
+
+deactivate CTRL
+
+UI --> ADM : Shows to the Administrator a list of pharmacies and asks him to choose the one he wants remove a product.
+deactivate UI
+
+ADM -> UI : Selects the Pharmacy he wants remove a product.
+activate UI
+
+UI -> CTRL : getPharmacyByEmail(PharmacyEmail)
+activate CTRL
+
+CTRL -> PHARDB: phar = getPharmacy(PharmacyEmail)
+activate PHARDB
+deactivate PHARDB
+deactivate CTRL
+
+UI -> CTRL : productsList = getProductsList()
+activate CTRL
+
+CTRL -> PRODUCTDB: productsList = geAllProducts()
+activate PRODUCTDB
+deactivate PRODUCTDB
+
+deactivate CTRL
+
+UI --> ADM : Shows to the Administrator a list of products and asks him to choose the one he wants remove.
+deactivate UI
+
+ADM -> UI : Selects the product he wants remove.
+activate UI
+
+UI -> CTRL : getProductByReference(productReference)
+activate CTRL
+
+CTRL -> PRODUCTDB: product = getProduct(productReference)
+activate PRODUCTDB
+deactivate PRODUCTDB
+
+UI --> ADM:  Displays the data, asking him to confirm it.
+deactivate CTRL
+deactivate UI
+
+ADM -> UI : Confirms.
+activate UI
+UI -> CTRL : removeProduct()
+activate CTRL
+
+CTRL -> OPRODUCT : remove()
+activate OPRODUCT
+
+OPRODUCT -> OPRODUCT : productReference = getReference()
+
+OPRODUCT -> PRODUCTDB : remove(productReference)
+activate PRODUCTDB
+deactivate PRODUCTDB
+deactivate OPRODUCT
+
+UI --> ADM : Informs about the success of the operation.
+deactivate CTRL
+deactivate UI
+
+deactivate ADM
+@enduml

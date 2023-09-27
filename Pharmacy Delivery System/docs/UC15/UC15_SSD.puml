@@ -1,0 +1,33 @@
+@startuml
+autonumber
+actor "Administrator" as ADM
+
+activate ADM
+ADM -> ":System" : Starts the process update product.
+activate ":System"
+":System" --> ADM : Asks the Administrator for the Pharmacy that he wants update a product.
+deactivate ":System"
+
+ADM -> ":System" : Selects the Pharmacy he wants update a product.
+activate ":System"
+":System" --> ADM : Asks the Administrator for the product he wants to update.
+deactivate ":System"
+
+ADM -> ":System" : Selects the product he wants to update.
+activate ":System"
+":System" --> ADM : Asks for the necessary product's data (Name, Description, Price, Weight, Amount).
+deactivate ":System"
+
+ADM -> ":System" : Enters the requested data.
+activate ":System"
+":System" --> ADM : Displays the data, requesting confirmation to update the product.
+deactivate ":System"
+
+ADM -> ":System" :  Confirms
+activate ":System"
+":System" --> ADM :  Informs about the success of the operation
+deactivate ":System"
+
+deactivate ADM
+
+@enduml

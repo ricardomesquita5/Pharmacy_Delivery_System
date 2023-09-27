@@ -1,0 +1,59 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class RemoveProductUI {
+
+}
+
+class RemoveProductController {
+  +List<Pharmacy> getPharmaciesList()
+  +getPharmacyByEmail(PharmacyEmail)
+  +List<Product> getProductsList()
+  +getProductByReference(procuctReference)
+  +removeProduct()
+}
+
+class PharmacyDB {
+  +List<Pharmacy> getAllPharmacies()
+  +Pharmacy getPharmacy(PharmacyEmail)
+}
+
+class ProductDB {
+  +List<Product> getAllProducts()
+  +getProduct(procuctReference)
+  +remove(productReference)
+}
+
+class Product {
+  -String reference
+  -String name
+  -String description
+  -Double price
+  -Double weight
+  -Integer amount
+  +String getReference()
+}
+
+class Pharmacy {
+  -String designation
+  -Adress adress
+  -Integer parkMax
+  +String getEmail()
+}
+
+class Administrator {
+  -String email
+}
+
+RemoveProductUI ..> RemoveProductController
+RemoveProductController ..> PharmacyDB
+RemoveProductController ..> Product
+RemoveProductController ..> Pharmacy
+
+Administrator "1" --> "*" Product : add/remove/update
+
+Pharmacy "1" -- "*" Product : has >
+
+ProductDB "1" -- "*" Product: removes >
+
+@enduml

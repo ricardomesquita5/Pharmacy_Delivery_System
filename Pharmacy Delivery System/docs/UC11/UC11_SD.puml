@@ -1,0 +1,83 @@
+@startuml
+autonumber
+actor "Client" as CLI
+
+participant ":PerformOrderUI" as UI
+participant ":PerformOrderController" as CTRL
+participant ":Order" as ORD
+participant ":OrderDB" as ORDDB
+participant ":ProductOrder" as PDR
+participant ":ProductOrderDB" as PDRDB
+participant ":Client"  as CLIE
+participant ":EmailHandler " as EH
+
+activate CLI
+CLI -> UI : Starts the process of performing an Order
+activate UI
+
+UI --> CLI : Presents a list of products that are available
+deactivate UI
+
+CLI -> UI : Chooses the product(s) and the amount wich he wants to buy
+activate UI
+
+UI --> CTRL : newOrder(idOrder,finalPrice)
+activate CTRL
+CTRL --> ORD : order = newOrder(idOrder,finalPrice)
+activate ORD
+deactivate ORD
+deactivate CTRL
+
+
+UI --> CTRL : newProductOrder(idOrder,reference,amount)
+activate CTRL
+CTRL --> PDR : pdOrder = newProductOrder(idOrder,reference,amount)
+activate PDR
+deactivate PDR
+deactivate CTRL
+
+UI --> CLI : displays the data and asks the user to confirm if everything is selected
+deactivate UI
+
+CLI --> UI : confirms the order and pays
+activate UI
+
+UI--> CTRL : calculateCredits(preco,credits)
+activate CTRL
+CTRL-->CLIE  : creds = calculateCredits(preco,credits)
+activate CLIE
+deactivate CLIE
+deactivate CTRL
+
+UI --> CTRL : addProductOrder
+activate CTRL
+CTRL --> PDR :save()
+activate PDR
+PDR --> PDRDB : addProductOrder(pdOrder)
+activate PDRDB
+deactivate PDR
+deactivate PDRDB
+deactivate CTRL
+
+UI --> CTRL :  addOrder()
+activate CTRL
+CTRL --> ORD : save()
+activate ORD
+ORD --> ORDDB :addOrder(order)
+activate ORDDB
+deactivate ORDDB
+deactivate ORD
+deactivate CTRL
+
+UI--> CTRL : sendEmail()
+activate CTRL
+CTRL --> EH : sendEmail()
+activate EH
+deactivate EH
+UI --> CLI : Notifies the client that the order has been made and shows him how many credits he has
+
+
+
+
+deactivate CLI
+@enduml

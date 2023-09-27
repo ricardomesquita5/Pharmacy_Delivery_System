@@ -1,0 +1,28 @@
+@startuml
+autonumber
+actor "Administrator" as ADM
+
+activate ADM
+ADM -> ":System" : Starts the process add product.
+activate ":System"
+":System" --> ADM : Asks the Administrator for the Pharmacy that he wants add a product.
+deactivate ":System"
+
+ADM -> ":System" : Selects the Pharmacy he wants add a product.
+activate ":System"
+":System" --> ADM : Asks for the necessary product's data (name, reference, description, price, weight, amount).
+deactivate ":System"
+
+ADM -> ":System" : Enters the requested data.
+activate ":System"
+":System" --> ADM : Displays the data, asking him to confirm it.
+deactivate ":System"
+
+ADM -> ":System" :  Confirms.
+activate ":System"
+":System" --> ADM :  Informs about the success of the operation.
+deactivate ":System"
+
+deactivate ADM
+
+@enduml

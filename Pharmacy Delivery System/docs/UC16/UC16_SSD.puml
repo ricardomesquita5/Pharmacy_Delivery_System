@@ -1,0 +1,12 @@
+@startuml
+autonumber
+actor "Courier" as COU
+
+activate COU
+COU -> ":System" : Starts the process of Parking a Scooter
+activate ":System"
+":System" --> COU : Verifies if the scooter is well parked and notifies the courier with an email.
+deactivate ":System"
+
+deactivate COU
+@enduml

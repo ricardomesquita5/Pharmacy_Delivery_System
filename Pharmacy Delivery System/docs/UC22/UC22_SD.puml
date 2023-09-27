@@ -1,0 +1,37 @@
+@startuml
+autonumber
+actor "Courier/Drone" as COU
+
+participant ":DeliveryUI" as UI
+participant ":DeliveryController" as CTRL
+participant ":Delivery" as DEL
+participant ":DeliveryDB" as DELDB
+participant ":EmailHandler " as E
+
+activate COU
+COU -> UI : Starts the process of delivering an Order
+activate UI
+
+
+
+
+
+UI --> CTRL : newDelivery()
+activate CTRL
+CTRL --> DEL : newDelivery()
+activate DEL
+deactivate DEL
+CTRL --> DELDB : newDelivery()
+activate DELDB
+deactivate DELDB
+CTRL --> E : sendEmail(clientEmail,subject,content)
+activate E
+deactivate E
+deactivate CTRL
+UI --> COU : sends an email to client notifying that the delivery has begun.
+
+
+
+
+deactivate CLI
+@enduml

@@ -1,0 +1,83 @@
+@startuml
+autonumber
+'hide footbox
+actor "Courier" as COU
+
+participant ":StartDeliveryUI" as UI
+participant ":DeliveryController" as CTRL
+participant ":CourierDB" as CDB
+participant ":DeliveryByScooterDB" as DSCOODB
+participant ":DeliveryByScooter" as DSCOO
+participant ":OrderDB" as ODB
+participant ":ScooterDB"  as SDB
+
+activate COU
+COU -> UI : Starts the process of starting a delivery
+activate UI
+
+UI -> CTRL : getCourierByEmail(userEmail)
+activate CTRL
+
+CTRL -> CDB: getCourier(userEmail)
+activate CDB
+deactivate CDB
+
+deactivate CTRL
+
+UI --> CTRL : getDeliveryByScooter("assigned")
+activate CTRL
+
+CTRL --> DSCOODB :getDeliveryByScooterByEmailCourier("assigned",userEmail)
+activate DSCOODB
+deactivate DSCOODB
+
+deactivate CTRL
+
+UI --> CTRL : changeDeliveryByScooter("started")
+activate CTRL
+
+CTRL --> DSCOO : setStatus("started")
+activate DSCOO
+deactivate DSCOO
+
+deactivate CTRL
+
+UI --> CTRL : updateDeliveryByScooter()
+activate CTRL
+
+CTRL --> DSCOO : update
+activate DSCOO
+
+DSCOO --> DSCOODB: updateDeliveryByScooter
+activate DSCOODB
+deactivate DSCOODB
+
+deactivate DSCOO
+
+deactivate CTRL
+
+UI --> CTRL : getOrdersFromDelivery()
+activate CTRL
+
+CTRL --> ODB :getOrdersByDeliveryId(deliveryId)
+activate ODB
+deactivate ODB
+
+deactivate CTRL
+
+UI --> CTRL : getScooter()
+activate CTRL
+
+CTRL --> SDB :getScooterByemailCourierOnDel(userEmail)
+activate SDB
+deactivate SDB
+
+deactivate CTRL
+
+UI -> COU : Shows the orders to deliver and the scooter to use
+
+deactivate UI
+deactivate COU
+
+
+@enduml

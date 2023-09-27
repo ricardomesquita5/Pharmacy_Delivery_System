@@ -1,0 +1,12 @@
+@startuml
+autonumber
+actor "Courier" as COU
+
+activate COU
+COU -> ":System" : Starts the process of starting a delivery by scooter
+activate ":System"
+":System" --> COU : Shows the orders to deliver and the scooter to use
+deactivate ":System"
+
+deactivate COU
+@enduml

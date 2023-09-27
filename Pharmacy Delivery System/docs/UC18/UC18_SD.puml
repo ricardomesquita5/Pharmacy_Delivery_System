@@ -1,0 +1,125 @@
+@startuml
+autonumber
+'hide footbox
+actor "Administrator" as ADM
+
+participant ":AddParkUI" as UI
+participant ":AddParkController" as CTRL
+participant ":PharmacyDB" as PHARDB
+participant ":Park" as SCOOTER
+participant ":Spot" as SPOT
+participant "phar\n:Pharmacy" as PHAR
+participant "park\n:Park" as OSCOOTER
+participant "spot\n:Spot" as OSSPOT
+participant ":ParkDB" as SCOOTERDB
+participant ":SpotDB" as SPOTDB
+participant "list\n:List<Integer>" as LISTT
+participant "pharmaciesList\n:List<Pharmacy>" as LPHAR
+
+activate ADM
+ADM -> UI : Starts the process of add a park to a pharmacy
+activate UI
+
+UI -> CTRL : pharmaciesList = getPharmaciesList()
+activate CTRL
+
+CTRL -> PHARDB: pharmaciesList = geAllPharmacies()
+activate PHARDB
+deactivate PHARDB
+
+deactivate CTRL
+
+UI --> ADM : Shows to the Administrator a list of pharmacies and asks him to choose the \n one he wants to add a park to
+deactivate UI
+
+ADM -> UI : Selects the Pharmacy
+activate UI
+
+UI -> CTRL : getPharmacyByEmail(PharmacyEmail)
+activate CTRL
+
+CTRL -> PHARDB: phar = getPharmacy(PharmacyEmail)
+activate PHARDB
+deactivate PHARDB
+
+deactivate CTRL
+
+UI --> ADM : Asks for the necessary park´s data (i.e. type of park (scooter/drone), spots \n capacity, power capacity) and also asks to select the spots that will \n allow to charge the vehicles
+deactivate UI
+
+ADM -> UI : Enters the requested data
+activate UI
+
+UI -> CTRL : newPark(designation, spotsCapacity, powerCapacity)
+activate CTRL
+
+CTRL -> SCOOTER : park = new Park(designation, spotsCapacity, powerCapacity)
+activate SCOOTER
+
+SCOOTER -> SCOOTERDB** : create(designation, spotsCapacity, powerCapacity)
+deactivate SCOOTER
+deactivate CTRL
+
+UI -> CTRL : newSpots(list)
+activate CTRL
+
+UI --> ADM :  Displays the data, asking him to confirm it
+deactivate CTRL
+deactivate UI
+
+ADM -> UI : Confirms
+activate UI
+UI -> CTRL : addPark()
+activate CTRL
+
+CTRL -> PHAR : pharEmail = getEmail()
+activate PHAR
+deactivate PHAR
+
+CTRL -> OSCOOTER : save(pharEmail)
+activate OSCOOTER
+
+OSCOOTER -> SCOOTERDB : addPark(park,pharEmail)
+activate SCOOTERDB
+deactivate SCOOTERDB
+deactivate OSCOOTER
+
+CTRL -> SCOOTERDB : id = getLastPark(pharEmail)
+activate SCOOTERDB
+deactivate SCOOTERDB
+
+loop [from one to the number inserted for spotsCapacity]
+
+OPT [ list.contains(i) ]
+
+CTRL -> SPOT : spot = new Spot(i,"no")
+activate SPOT
+SPOT -> OSSPOT** : create(id,chargingSpot)
+deactivate SPOT
+
+else
+
+CTRL -> SPOT : spot = new Spot(i,"yes")
+activate SPOT
+SPOT -> OSSPOT** : create(id,chargingSpot)
+deactivate SPOT
+
+end OPT
+
+CTRL -> OSSPOT : save(id)
+activate OSSPOT
+OSSPOT -> SPOTDB : addSpot(spot,id)
+activate SPOTDB
+deactivate SPOTDB
+deactivate OSSPOT
+
+end loop
+
+deactivate CTRL
+
+UI --> ADM : Informs about the success of the operation
+deactivate UI
+
+deactivate ADM
+
+@enduml

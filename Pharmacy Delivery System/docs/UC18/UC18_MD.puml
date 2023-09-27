@@ -1,0 +1,61 @@
+@startuml
+
+hide methods
+left to right direction
+
+class Platform {
+  -String designation
+}
+
+class Pharmacy {
+  -String designation
+  -String email
+}
+
+class Park {
+  -Integer id
+  -String designation
+  -Integer spotsCapacity
+  -Double powerCapacity
+  -Integer chargingScooters
+}
+
+class Spot {
+  -Integer id
+  -String chargingSpot
+  -Integer idPark
+}
+
+class Address {
+  -String street
+  -String postalCode
+  -Integer number
+  -String locality
+  -String GPSCoordinates
+  -Integer elevation
+}
+
+class User {
+  -String name
+  -String email
+  -String password
+}
+
+class Administrator {
+  -String email
+}
+
+Platform "1" -- "*" Pharmacy : has registered >
+Platform "1" -- "1" Administrator : has registered >
+Platform "1" -- "*" User : has registered >
+
+Pharmacy "1" -- "1" Address : has >
+Pharmacy "1" -- "*" Park : has >
+
+Park "1" -- "*" Spot : has >
+
+Administrator "0..1" -- "1" User : acts as >
+Administrator "1" -- "*" Pharmacy : creates/manages >
+
+
+@enduml

@@ -1,0 +1,64 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class UpdateProductUI {
+
+}
+
+class UpdateProductController {
+  +List<Pharmacy> getPharmaciesList()
+  +getPharmacyByEmail(PharmacyEmail)
+  +List<Product> getProductsList()
+  +getProductByReference(productReference)
+  +changeProduct(name, description, price, weight, amount)
+  +updateProduct()
+}
+
+class PharmacyDB {
+  +List<Pharmacy> getAllPharmacies()
+  +Pharmacy getPharmacy(PharmacyEmail)
+}
+
+class ProductDB {
+  +List<Product> getAllProducts(pharEmail)
+  +getProduct(productReference)
+  +update(product)
+}
+
+class Product {
+  -String reference
+  -String name
+  -String description
+  -Double price
+  -Double weight
+  -Integer amount
+  +setName(name)
+  +setDescription(description)
+  +setPrice(price)
+  +setWeight(weight)
+  +setAmount(amount)
+}
+
+class Pharmacy {
+  -String designation
+  -Adress adress
+  -Integer parkMax
+  +String getEmail()
+}
+
+class Administrator {
+  -String email
+}
+
+UpdateProductUI ..> UpdateProductController
+UpdateProductController ..> PharmacyDB
+UpdateProductController ..> Product
+UpdateProductController ..> Pharmacy
+
+Administrator "1" --> "*" Product : add/remove/update
+
+Pharmacy "1" -- "*" Product : has >
+
+ProductDB "1" -- "*" Product: updates >
+
+@enduml

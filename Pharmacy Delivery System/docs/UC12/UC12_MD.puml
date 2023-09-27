@@ -1,0 +1,50 @@
+@startuml
+
+hide methods
+left to right direction
+
+class Platform {
+  -String designation
+}
+class Pharmacy {
+  -String designation
+  -String email
+  -String parkMax
+}
+
+class Courier {
+-String name
+-String email
+-String phoneNumber
+-Integer socialSecurityNumber
+-Integer nif
+-String status
+}
+
+class Scooter {
+  -String id
+  -Double capacity
+  -Double power
+  -Integer battery
+  -Boolean isCharching
+  -Boolean isParked
+}
+
+class User {
+  -String name
+  -String email
+  -String password
+}
+
+
+
+Platform "1" -- "*" User : has registered >
+Platform "1" -- "1" Pharmacy :has registered >
+
+Pharmacy "1"-- "1" Courier : associated to >
+
+Courier "0..1" -- "1" User : act as >
+Courier "1" -- "1" Scooter : parks a >
+
+
+@enduml

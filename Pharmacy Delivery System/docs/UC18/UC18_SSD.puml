@@ -1,0 +1,28 @@
+@startuml
+autonumber
+actor "Administrator" as ADM
+
+activate ADM
+ADM -> ":System" : Starts the process of add a park to a pharmacy
+activate ":System"
+":System" --> ADM : Asks the Administrator for the Pharmacy that he wants to add a park to
+deactivate ":System"
+
+ADM -> ":System" : Selects the Pharmacy
+activate ":System"
+":System" --> ADM : Asks for the necessary park´s data (i.e. type of park (scooter/drone), spots \n capacity, power capacity) and also asks to select the spots that will \n allow to charge de vehicles
+deactivate ":System"
+
+ADM -> ":System" : Enters the requested data
+activate ":System"
+":System" --> ADM : Displays the data, asking him to confirm it
+deactivate ":System"
+
+ADM -> ":System" :  Confirms
+activate ":System"
+":System" --> ADM :  Informs about the success of the operation
+deactivate ":System"
+
+deactivate ADM
+
+@enduml

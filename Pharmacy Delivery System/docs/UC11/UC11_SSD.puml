@@ -1,0 +1,12 @@
+
+@startuml
+autonumber
+actor "Client" as CLI
+
+activate CLI
+CLI -> ":System" : The Client performs and order.
+activate ":System"
+":System" --> CLI : The system notifies the cliet that the order is done and that sends the receipt and the amount of credits he has gained.
+deactivate ":System"
+deactivate CLI
+@enduml

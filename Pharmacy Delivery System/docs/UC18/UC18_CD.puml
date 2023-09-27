@@ -1,0 +1,95 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class AddParkUI {
+
+}
+
+class AddParkController {
+
+  +List<Pharmacy> getPharmaciesList()
+  +getPharmacyByEmail(PharmacyEmail)
+  +newPark(designation, spotsCapacity, powerCapacity)
+  +newSpots(list)
+  +addPark()
+}
+
+class PharmacyDB {
+  +List<Pharmacy> getAllPharmacies()
+  +Pharmacy getPharmacy(PharmacyEmail)
+}
+
+class Pharmacy {
+  -String designation
+  -String email
+
+  +String getEmail()
+}
+
+class Address {
+
+  -String street
+  -String postalCode
+  -Integer number
+  -String locality
+  -String GPSCoordinates
+  -Integer elevation
+}
+
+class Park {
+    -Integer id
+    -String designation
+    -Integer spotsCapacity
+    -Double powerCapacity
+    -Integer chargingScooters
+
+    +Park(designation, spotsCapacity, powerCapacity)
+    +save(pharEmail)
+}
+
+class ParkDB {
+
+  +addPark(park,pharEmail)
+  +getLastPark(pharEmail)
+}
+
+class Spot {
+    -Integer id
+    -String chargingSpot
+    -Integer idPark
+
+    +Spot(id, chargingSpot)
+    +save(id)
+}
+
+class SpotDB {
+  +addSpot(spot,id)
+}
+
+class Administrator {
+  -String email
+}
+
+AddParkUI ..> AddParkController
+AddParkController ..> PharmacyDB
+AddParkController ..> Pharmacy
+AddParkController ..> Park
+AddParkController ..> Spot
+AddParkController ..> ParkDB
+AddParkController ..> SpotDB
+
+Administrator "1" --> "*" Park : add
+
+Park "1" --> "*" Spot : has
+
+ParkDB "1" --> "*" Park : has
+
+SpotDB "1" --> "*" Spot : has
+
+PharmacyDB "1" --> "*" Pharmacy : has
+
+Pharmacy "1" --> "1" Address : has
+Pharmacy "1" --> "*" Park : has
+
+
+@enduml

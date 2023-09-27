@@ -1,0 +1,106 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class EmailHandler {
+
+}
+
+class DeliveryUI {
+
+}
+
+class DeliveryController {
+
+}
+
+class OrderDB {
+
+}
+
+class ProductOrderDB {
+
+}
+
+class Product {
+  -String name
+  -String reference
+  -String description
+  -Double price
+  -Integer amount
+
+}
+
+class Order {
+  - int idOrder
+  - double finalPrice
+}
+
+class ProductOrder {
+  -int reference
+  -int idOrder
+  -int amount
+}
+
+class Client {
+  -String name
+  -String email
+  -String creditCardNumber
+  -Date validityDate
+  -Integer ccv
+
+}
+
+class Adress {
+  -String street
+  -String postalCode
+  -Integer number
+  -String locality
+  -String GPSCoordinates
+
+}
+
+class ClientDB {
+
+}
+
+class User {
+  -String name
+  -String mail
+  -String password
+}
+
+class Delivery{
+  -int deliveryId
+  -String deliveryStatus
+}
+
+class DeliveryDB{
+
+}
+
+DeliveryUI ..> DeliveryController
+DeliveryController ..> ProductOrderDB
+DeliveryController ..> OrderDB
+DeliveryController ..> ClientDB
+DeliveryController ..> DeliveryDB
+DeliveryDB ..> Delivery
+ClientDB ..> Client
+OrderDB  ..>  Order
+ProductOrderDB ..> ProductOrder
+DeliveryController ..> EmailHandler
+
+Delivery "1" --> "*" Order : has >
+
+Client "1" --> "*" Order : performs a >
+
+Client "*" --> "1" Adress: has >
+
+Client "1" --> "1" User : acts has >
+
+Order "1" -- "*" ProductOrder : has >
+
+ProductOrder "*" -- "1" Product : has >
+
+
+
+@enduml

@@ -1,0 +1,38 @@
+@startuml
+
+hide methods
+left to right direction
+
+class Platform {
+  -String designation
+}
+
+class Administrator {
+  -String name
+  -String email
+}
+
+class Scooter {
+  -String id
+  -Double capacity
+  -Double power
+  -Integer battery
+  -Boolean isCharching
+  -Boolean isParked
+}
+
+class Courier {
+  -String name
+  -String email
+  -Integer phoneNumber
+  -Integer socialSecurityNumber
+  -Integer nif
+  -String status
+}
+
+Platform "1" -- "*" Administrator : has registered >
+
+Administrator "1" -- "*" Scooter : add/remove/update >
+Administrator "1" -- "*" Courier : manage >
+
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+autonumber
+actor "Courier" as COU
+
+activate COU
+COU -> ":System" : The Courier starts the order.
+activate ":System"
+":System" --> COU : The system notifies the cliet that the delivery is beeing made.
+deactivate ":System"
+deactivate COU
+@enduml

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="607px" preserveAspectRatio="none" style="width:843px;height:607px;" version="1.1" viewBox="0 0 843 607" width="843px" zoomAndPan="magnify">
+    <defs>
+        <filter height="300%" id="f1go0bdnoxbxvi" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0" />
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0" />
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3" />
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal" />
+        </filter>
+    </defs>
+    <g>
+        <!--class StartDeliveryUI-->
+        <rect fill="#FEFECE" filter="url(#f1go0bdnoxbxvi)" height="48" id="StartDeliveryUI" style="stroke: #A80036; stroke-width: 1.5;" width="112" x="317.267" y="8" />
+        <ellipse cx="332.267" cy="24" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;" />
+        <path d="M335.0326,19.875 Q335.1889,19.6563 335.3764,19.5469 Q335.5639,19.4375 335.7826,19.4375 Q336.1576,19.4375 336.392,19.6953 Q336.6264,19.9531 336.6264,20.5625 L336.6264,22.0156 Q336.6264,22.625 336.392,22.8906 Q336.1576,23.1563 335.7826,23.1563 Q335.4389,23.1563 335.2358,22.9531 Q335.0326,22.7656 334.9233,22.25 Q334.8764,21.8906 334.6889,21.7031 Q334.3608,21.3281 333.7514,21.1094 Q333.142,20.8906 332.517,20.8906 Q331.7514,20.8906 331.1186,21.2188 Q330.4858,21.5469 329.9936,22.2969 Q329.5014,23.0469 329.5014,24.0781 L329.5014,25.1719 Q329.5014,26.4063 330.392,27.2266 Q331.2826,28.0469 332.8764,28.0469 Q333.8139,28.0469 334.4701,27.7969 Q334.8608,27.6406 335.2826,27.2031 Q335.5483,26.9375 335.6967,26.8594 Q335.8451,26.7813 336.0483,26.7813 Q336.3764,26.7813 336.6342,27.0391 Q336.892,27.2969 336.892,27.6406 Q336.892,27.9844 336.5483,28.3906 Q336.0483,28.9688 335.2514,29.2969 Q334.1733,29.75 332.8764,29.75 Q331.3608,29.75 330.1576,29.125 Q329.1733,28.625 328.4858,27.5547 Q327.7983,26.4844 327.7983,25.2031 L327.7983,24.0469 Q327.7983,22.7188 328.4154,21.5703 Q329.0326,20.4219 330.1264,19.8047 Q331.2201,19.1875 332.4545,19.1875 Q333.1889,19.1875 333.8373,19.3516 Q334.4858,19.5156 335.0326,19.875 Z " /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="80" x="346.267" y="28.9102">StartDeliveryUI</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="318.267" x2="428.267" y1="40" y2="40" />
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="318.267" x2="428.267" y1="48" y2="48" />
+        <!--class DeliveryController-->
+        <rect fill="#FEFECE" filter="url(#f1go0bdnoxbxvi)" height="131.0156" id="DeliveryController" style="stroke: #A80036; stroke-width: 1.5;" width="194" x="276.267" y="117" />
+        <ellipse cx="320.517" cy="133" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;" />
+        <path d="M323.2826,128.875 Q323.4389,128.6563 323.6264,128.5469 Q323.8139,128.4375 324.0326,128.4375 Q324.4076,128.4375 324.642,128.6953 Q324.8764,128.9531 324.8764,129.5625 L324.8764,131.0156 Q324.8764,131.625 324.642,131.8906 Q324.4076,132.1563 324.0326,132.1563 Q323.6889,132.1563 323.4858,131.9531 Q323.2826,131.7656 323.1733,131.25 Q323.1264,130.8906 322.9389,130.7031 Q322.6108,130.3281 322.0014,130.1094 Q321.392,129.8906 320.767,129.8906 Q320.0014,129.8906 319.3686,130.2188 Q318.7358,130.5469 318.2436,131.2969 Q317.7514,132.0469 317.7514,133.0781 L317.7514,134.1719 Q317.7514,135.4063 318.642,136.2266 Q319.5326,137.0469 321.1264,137.0469 Q322.0639,137.0469 322.7201,136.7969 Q323.1108,136.6406 323.5326,136.2031 Q323.7983,135.9375 323.9467,135.8594 Q324.0951,135.7813 324.2983,135.7813 Q324.6264,135.7813 324.8842,136.0391 Q325.142,136.2969 325.142,136.6406 Q325.142,136.9844 324.7983,137.3906 Q324.2983,137.9688 323.5014,138.2969 Q322.4233,138.75 321.1264,138.75 Q319.6108,138.75 318.4076,138.125 Q317.4233,137.625 316.7358,136.5547 Q316.0483,135.4844 316.0483,134.2031 L316.0483,133.0469 Q316.0483,131.7188 316.6654,130.5703 Q317.2826,129.4219 318.3764,128.8047 Q319.4701,128.1875 320.7045,128.1875 Q321.4389,128.1875 322.0873,128.3516 Q322.7358,128.5156 323.2826,128.875 Z " /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="97" x="341.017" y="137.9102">DeliveryController</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="277.267" x2="469.267" y1="149" y2="149" />
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="277.267" x2="469.267" y1="157" y2="157" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="147" x="282.267" y="172.4189">+getCourierByEmail(userEmail)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="171" x="282.267" y="186.2549">+getDeliveryByScooter("assigned")</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="182" x="282.267" y="200.0908">+changeDeliveryByScooter("started")</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="137" x="282.267" y="213.9268">+updateDeliveryByScooter()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="126" x="282.267" y="227.7627">+getOrdersFromDelivery()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="67" x="282.267" y="241.5986">+getScooter()</text>
+        <!--class CourierDB-->
+        <rect fill="#FEFECE" filter="url(#f1go0bdnoxbxvi)" height="61.8359" id="CourierDB" style="stroke: #A80036; stroke-width: 1.5;" width="122" x="521.267" y="353.5" />
+        <ellipse cx="550.667" cy="369.5" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;" />
+        <path d="M553.4326,365.375 Q553.5889,365.1563 553.7764,365.0469 Q553.9639,364.9375 554.1826,364.9375 Q554.5576,364.9375 554.792,365.1953 Q555.0264,365.4531 555.0264,366.0625 L555.0264,367.5156 Q555.0264,368.125 554.792,368.3906 Q554.5576,368.6563 554.1826,368.6563 Q553.8389,368.6563 553.6358,368.4531 Q553.4326,368.2656 553.3233,367.75 Q553.2764,367.3906 553.0889,367.2031 Q552.7608,366.8281 552.1514,366.6094 Q551.542,366.3906 550.917,366.3906 Q550.1514,366.3906 549.5186,366.7188 Q548.8858,367.0469 548.3936,367.7969 Q547.9014,368.5469 547.9014,369.5781 L547.9014,370.6719 Q547.9014,371.9063 548.792,372.7266 Q549.6826,373.5469 551.2764,373.5469 Q552.2139,373.5469 552.8701,373.2969 Q553.2608,373.1406 553.6826,372.7031 Q553.9483,372.4375 554.0967,372.3594 Q554.2451,372.2813 554.4483,372.2813 Q554.7764,372.2813 555.0342,372.5391 Q555.292,372.7969 555.292,373.1406 Q555.292,373.4844 554.9483,373.8906 Q554.4483,374.4688 553.6514,374.7969 Q552.5733,375.25 551.2764,375.25 Q549.7608,375.25 548.5576,374.625 Q547.5733,374.125 546.8858,373.0547 Q546.1983,371.9844 546.1983,370.7031 L546.1983,369.5469 Q546.1983,368.2188 546.8154,367.0703 Q547.4326,365.9219 548.5264,365.3047 Q549.6201,364.6875 550.8545,364.6875 Q551.5889,364.6875 552.2373,364.8516 Q552.8858,365.0156 553.4326,365.375 Z " /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="58" x="567.867" y="374.4102">CourierDB</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="522.267" x2="642.267" y1="385.5" y2="385.5" />
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="522.267" x2="642.267" y1="393.5" y2="393.5" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="110" x="527.267" y="408.9189">+getCourier(userEmail)</text>
+        <!--class DeliveryByScooterDB-->
+        <rect fill="#FEFECE" filter="url(#f1go0bdnoxbxvi)" height="75.6719" id="DeliveryByScooterDB" style="stroke: #A80036; stroke-width: 1.5;" width="304" x="43.2675" y="521" />
+        <ellipse cx="133.5175" cy="537" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;" />
+        <path d="M136.2831,532.875 Q136.4394,532.6563 136.6269,532.5469 Q136.8144,532.4375 137.0331,532.4375 Q137.4081,532.4375 137.6425,532.6953 Q137.8769,532.9531 137.8769,533.5625 L137.8769,535.0156 Q137.8769,535.625 137.6425,535.8906 Q137.4081,536.1563 137.0331,536.1563 Q136.6894,536.1563 136.4862,535.9531 Q136.2831,535.7656 136.1737,535.25 Q136.1269,534.8906 135.9394,534.7031 Q135.6112,534.3281 135.0019,534.1094 Q134.3925,533.8906 133.7675,533.8906 Q133.0019,533.8906 132.3691,534.2188 Q131.7362,534.5469 131.2441,535.2969 Q130.7519,536.0469 130.7519,537.0781 L130.7519,538.1719 Q130.7519,539.4063 131.6425,540.2266 Q132.5331,541.0469 134.1269,541.0469 Q135.0644,541.0469 135.7206,540.7969 Q136.1112,540.6406 136.5331,540.2031 Q136.7987,539.9375 136.9472,539.8594 Q137.0956,539.7813 137.2987,539.7813 Q137.6269,539.7813 137.8847,540.0391 Q138.1425,540.2969 138.1425,540.6406 Q138.1425,540.9844 137.7987,541.3906 Q137.2987,541.9688 136.5019,542.2969 Q135.4237,542.75 134.1269,542.75 Q132.6112,542.75 131.4081,542.125 Q130.4237,541.625 129.7362,540.5547 Q129.0487,539.4844 129.0487,538.2031 L129.0487,537.0469 Q129.0487,535.7188 129.6659,534.5703 Q130.2831,533.4219 131.3769,532.8047 Q132.4706,532.1875 133.705,532.1875 Q134.4394,532.1875 135.0878,532.3516 Q135.7362,532.5156 136.2831,532.875 Z " /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="115" x="154.0175" y="541.9102">DeliveryByScooterDB</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="44.2675" x2="346.2675" y1="553" y2="553" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="129" x="49.2675" y="568.4189">+updateDeliveryByScooter</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="44.2675" x2="346.2675" y1="574.8359" y2="574.8359" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="292" x="49.2675" y="590.2549">+getDeliveryByScooterByEmailCourier("assigned",userEmail)</text>
+        <!--class DeliveryByScooter-->
+        <rect fill="#FEFECE" filter="url(#f1go0bdnoxbxvi)" height="117.1797" id="DeliveryByScooter" style="stroke: #A80036; stroke-width: 1.5;" width="151" x="678.767" y="326" />
+        <ellipse cx="703.217" cy="342" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;" />
+        <path d="M705.9826,337.875 Q706.1389,337.6563 706.3264,337.5469 Q706.5139,337.4375 706.7326,337.4375 Q707.1076,337.4375 707.342,337.6953 Q707.5764,337.9531 707.5764,338.5625 L707.5764,340.0156 Q707.5764,340.625 707.342,340.8906 Q707.1076,341.1563 706.7326,341.1563 Q706.3889,341.1563 706.1858,340.9531 Q705.9826,340.7656 705.8733,340.25 Q705.8264,339.8906 705.6389,339.7031 Q705.3108,339.3281 704.7014,339.1094 Q704.092,338.8906 703.467,338.8906 Q702.7014,338.8906 702.0686,339.2188 Q701.4358,339.5469 700.9436,340.2969 Q700.4514,341.0469 700.4514,342.0781 L700.4514,343.1719 Q700.4514,344.4063 701.342,345.2266 Q702.2326,346.0469 703.8264,346.0469 Q704.7639,346.0469 705.4201,345.7969 Q705.8108,345.6406 706.2326,345.2031 Q706.4983,344.9375 706.6467,344.8594 Q706.7951,344.7813 706.9983,344.7813 Q707.3264,344.7813 707.5842,345.0391 Q707.842,345.2969 707.842,345.6406 Q707.842,345.9844 707.4983,346.3906 Q706.9983,346.9688 706.2014,347.2969 Q705.1233,347.75 703.8264,347.75 Q702.3108,347.75 701.1076,347.125 Q700.1233,346.625 699.4358,345.5547 Q698.7483,344.4844 698.7483,343.2031 L698.7483,342.0469 Q698.7483,340.7188 699.3654,339.5703 Q699.9826,338.4219 701.0764,337.8047 Q702.1701,337.1875 703.4045,337.1875 Q704.1389,337.1875 704.7873,337.3516 Q705.4358,337.5156 705.9826,337.875 Z " /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="98" x="719.317" y="346.9102">DeliveryByScooter</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="679.767" x2="828.767" y1="358" y2="358" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="139" x="684.767" y="373.4189">+Integer deliveryByScooterId</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="61" x="684.767" y="387.2549">String status</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="39" x="684.767" y="401.0908">+update</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="679.767" x2="828.767" y1="407.5078" y2="407.5078" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="88" x="684.767" y="422.9268">+super(deliveryId)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="102" x="684.767" y="436.7627">+setStatus("started")</text>
+        <!--class OrderDB-->
+        <rect fill="#FEFECE" filter="url(#f1go0bdnoxbxvi)" height="61.8359" id="OrderDB" style="stroke: #A80036; stroke-width: 1.5;" width="181" x="43.7675" y="353.5" />
+        <ellipse cx="106.0175" cy="369.5" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;" />
+        <path d="M108.7831,365.375 Q108.9394,365.1563 109.1269,365.0469 Q109.3144,364.9375 109.5331,364.9375 Q109.9081,364.9375 110.1425,365.1953 Q110.3769,365.4531 110.3769,366.0625 L110.3769,367.5156 Q110.3769,368.125 110.1425,368.3906 Q109.9081,368.6563 109.5331,368.6563 Q109.1894,368.6563 108.9863,368.4531 Q108.7831,368.2656 108.6738,367.75 Q108.6269,367.3906 108.4394,367.2031 Q108.1113,366.8281 107.5019,366.6094 Q106.8925,366.3906 106.2675,366.3906 Q105.5019,366.3906 104.8691,366.7188 Q104.2363,367.0469 103.7441,367.7969 Q103.2519,368.5469 103.2519,369.5781 L103.2519,370.6719 Q103.2519,371.9063 104.1425,372.7266 Q105.0331,373.5469 106.6269,373.5469 Q107.5644,373.5469 108.2206,373.2969 Q108.6113,373.1406 109.0331,372.7031 Q109.2988,372.4375 109.4472,372.3594 Q109.5956,372.2813 109.7988,372.2813 Q110.1269,372.2813 110.3847,372.5391 Q110.6425,372.7969 110.6425,373.1406 Q110.6425,373.4844 110.2988,373.8906 Q109.7988,374.4688 109.0019,374.7969 Q107.9238,375.25 106.6269,375.25 Q105.1113,375.25 103.9081,374.625 Q102.9238,374.125 102.2363,373.0547 Q101.5488,371.9844 101.5488,370.7031 L101.5488,369.5469 Q101.5488,368.2188 102.1659,367.0703 Q102.7831,365.9219 103.8769,365.3047 Q104.9706,364.6875 106.205,364.6875 Q106.9394,364.6875 107.5878,364.8516 Q108.2363,365.0156 108.7831,365.375 Z " /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="48" x="126.5175" y="374.4102">OrderDB</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="44.7675" x2="223.7675" y1="385.5" y2="385.5" />
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="44.7675" x2="223.7675" y1="393.5" y2="393.5" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="169" x="49.7675" y="408.9189">+getOrdersByDeliveryId(deliveryId)</text>
+        <!--class ScooterDB-->
+        <rect fill="#FEFECE" filter="url(#f1go0bdnoxbxvi)" height="61.8359" id="ScooterDB" style="stroke: #A80036; stroke-width: 1.5;" width="226" x="260.267" y="353.5" />
+        <ellipse cx="339.517" cy="369.5" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;" />
+        <path d="M342.2826,365.375 Q342.4389,365.1563 342.6264,365.0469 Q342.8139,364.9375 343.0326,364.9375 Q343.4076,364.9375 343.642,365.1953 Q343.8764,365.4531 343.8764,366.0625 L343.8764,367.5156 Q343.8764,368.125 343.642,368.3906 Q343.4076,368.6563 343.0326,368.6563 Q342.6889,368.6563 342.4858,368.4531 Q342.2826,368.2656 342.1733,367.75 Q342.1264,367.3906 341.9389,367.2031 Q341.6108,366.8281 341.0014,366.6094 Q340.392,366.3906 339.767,366.3906 Q339.0014,366.3906 338.3686,366.7188 Q337.7358,367.0469 337.2436,367.7969 Q336.7514,368.5469 336.7514,369.5781 L336.7514,370.6719 Q336.7514,371.9063 337.642,372.7266 Q338.5326,373.5469 340.1264,373.5469 Q341.0639,373.5469 341.7201,373.2969 Q342.1108,373.1406 342.5326,372.7031 Q342.7983,372.4375 342.9467,372.3594 Q343.0951,372.2813 343.2983,372.2813 Q343.6264,372.2813 343.8842,372.5391 Q344.142,372.7969 344.142,373.1406 Q344.142,373.4844 343.7983,373.8906 Q343.2983,374.4688 342.5014,374.7969 Q341.4233,375.25 340.1264,375.25 Q338.6108,375.25 337.4076,374.625 Q336.4233,374.125 335.7358,373.0547 Q335.0483,371.9844 335.0483,370.7031 L335.0483,369.5469 Q335.0483,368.2188 335.6654,367.0703 Q336.2826,365.9219 337.3764,365.3047 Q338.4701,364.6875 339.7045,364.6875 Q340.4389,364.6875 341.0873,364.8516 Q341.7358,365.0156 342.2826,365.375 Z " /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="59" x="360.017" y="374.4102">ScooterDB</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="261.267" x2="485.267" y1="385.5" y2="385.5" />
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="261.267" x2="485.267" y1="393.5" y2="393.5" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="214" x="266.267" y="408.9189">+getScooterByemailCourierOnDel(userEmail)</text>
+        <!--class Courier-->
+        <rect fill="#FEFECE" filter="url(#f1go0bdnoxbxvi)" height="131.0156" id="Courier" style="stroke: #A80036; stroke-width: 1.5;" width="157" x="675.767" y="117" />
+        <ellipse cx="729.517" cy="133" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;" />
+        <path d="M732.2826,128.875 Q732.4389,128.6563 732.6264,128.5469 Q732.8139,128.4375 733.0326,128.4375 Q733.4076,128.4375 733.642,128.6953 Q733.8764,128.9531 733.8764,129.5625 L733.8764,131.0156 Q733.8764,131.625 733.642,131.8906 Q733.4076,132.1563 733.0326,132.1563 Q732.6889,132.1563 732.4858,131.9531 Q732.2826,131.7656 732.1733,131.25 Q732.1264,130.8906 731.9389,130.7031 Q731.6108,130.3281 731.0014,130.1094 Q730.392,129.8906 729.767,129.8906 Q729.0014,129.8906 728.3686,130.2188 Q727.7358,130.5469 727.2436,131.2969 Q726.7514,132.0469 726.7514,133.0781 L726.7514,134.1719 Q726.7514,135.4063 727.642,136.2266 Q728.5326,137.0469 730.1264,137.0469 Q731.0639,137.0469 731.7201,136.7969 Q732.1108,136.6406 732.5326,136.2031 Q732.7983,135.9375 732.9467,135.8594 Q733.0951,135.7813 733.2983,135.7813 Q733.6264,135.7813 733.8842,136.0391 Q734.142,136.2969 734.142,136.6406 Q734.142,136.9844 733.7983,137.3906 Q733.2983,137.9688 732.5014,138.2969 Q731.4233,138.75 730.1264,138.75 Q728.6108,138.75 727.4076,138.125 Q726.4233,137.625 725.7358,136.5547 Q725.0483,135.4844 725.0483,134.2031 L725.0483,133.0469 Q725.0483,131.7188 725.6654,130.5703 Q726.2826,129.4219 727.3764,128.8047 Q728.4701,128.1875 729.7045,128.1875 Q730.4389,128.1875 731.0873,128.3516 Q731.7358,128.5156 732.2826,128.875 Z " /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="41" x="750.017" y="137.9102">Courier</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="676.767" x2="831.767" y1="149" y2="149" /><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="61" x="681.767" y="164.4189">-String name</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="59" x="681.767" y="178.2549">-String email</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="107" x="681.767" y="192.0908">-Integer phoneNumber</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="145" x="681.767" y="205.9268">-Integer socialSecurityNumber</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="52" x="681.767" y="219.7627">-Integer nif</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="65" x="681.767" y="233.5986">-String status</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="676.767" x2="831.767" y1="240.0156" y2="240.0156" />
+        <!--link StartDeliveryUI to DeliveryController-->
+        <path d="M373.267,56.203 C373.267,71.243 373.267,91.699 373.267,111.721 " fill="none" id="StartDeliveryUI-DeliveryController" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;" />
+        <polygon fill="#A80036" points="373.267,116.798,377.267,107.798,373.267,111.798,369.267,107.798,373.267,116.798" style="stroke: #A80036; stroke-width: 1.0;" />
+        <!--link DeliveryController to CourierDB-->
+        <path d="M440.835,248.158 C476.218,282.017 518.083,322.08 547.039,349.788 " fill="none" id="DeliveryController-CourierDB" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;" />
+        <polygon fill="#A80036" points="550.859,353.444,547.1237,344.331,547.2472,349.9865,541.5916,350.1099,550.859,353.444" style="stroke: #A80036; stroke-width: 1.0;" />
+        <!--link DeliveryController to DeliveryByScooterDB-->
+        <path d="M276.091,194.091 C194.122,208.728 81.5696,243.506 26.2675,326 C-2.6877,369.193 1.9489,397.037 26.2675,443 C43.2729,475.141 73.738,499.9756 104.1647,518.204 " fill="none" id="DeliveryController-DeliveryByScooterDB" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;" />
+        <polygon fill="#A80036" points="108.652,520.8456,102.9254,512.8328,104.3432,518.3091,98.8669,519.7269,108.652,520.8456" style="stroke: #A80036; stroke-width: 1.0;" />
+        <!--link DeliveryController to DeliveryByScooter-->
+        <path d="M470.44,228.765 C526.831,255.728 598.831,291.353 661.267,326 C665.562,328.383 669.939,330.872 674.337,333.421 " fill="none" id="DeliveryController-DeliveryByScooter" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;" />
+        <polygon fill="#A80036" points="678.74,335.988,672.9795,327.9995,674.4205,333.4697,668.9502,334.9107,678.74,335.988" style="stroke: #A80036; stroke-width: 1.0;" />
+        <!--link DeliveryController to OrderDB-->
+        <path d="M296.001,248.158 C255.374,282.155 207.274,322.407 174.148,350.127 " fill="none" id="DeliveryController-OrderDB" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;" />
+        <polygon fill="#A80036" points="170.185,353.444,179.6542,350.7358,174.0195,350.2352,174.5201,344.6006,170.185,353.444" style="stroke: #A80036; stroke-width: 1.0;" />
+        <!--link DeliveryController to ScooterDB-->
+        <path d="M373.267,248.158 C373.267,281.464 373.267,320.773 373.267,348.421 " fill="none" id="DeliveryController-ScooterDB" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;" />
+        <polygon fill="#A80036" points="373.267,353.444,377.267,344.444,373.267,348.444,369.267,344.444,373.267,353.444" style="stroke: #A80036; stroke-width: 1.0;" />
+        <!--link Courier to DeliveryByScooter-->
+        <path d="M754.267,248.158 C754.267,273.152 754.267,301.526 754.267,325.816 " fill="none" id="Courier-DeliveryByScooter" style="stroke: #A80036; stroke-width: 1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="33" x="755.267" y="292.4951">starts</text>
+        <polygon fill="#000000" points="767.267,301.3516,770.267,307.3516,773.267,301.3516,767.267,301.3516" style="stroke: #000000; stroke-width: 1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="746.8842" y="269.7278">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="746.8404" y="315.1945">1</text>
+        <!--link DeliveryByScooter to DeliveryByScooterDB-->
+        <path d="M678.651,434.855 C672.874,437.816 667.042,440.573 661.267,443 C560.343,485.414 440.28,514.5822 347.3,532.9291 " fill="none" id="DeliveryByScooter-DeliveryByScooterDB" style="stroke: #A80036; stroke-width: 1.0;" />
+        <polygon fill="#000000" points="583.267,480.6758,577.267,483.6758,583.267,486.6758,583.267,480.6758" style="stroke: #000000; stroke-width: 1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="46" x="589.267" y="487.4951">updates</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="5" x="665.5953" y="436.7268">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="355.3196" y="528.685">1</text>
+        <!--
+@startuml
+skinparam classAttributeIconSize 0
+
+class StartDeliveryUI {
+
+}
+
+class DeliveryController {
+  +getCourierByEmail(userEmail)
+  +getDeliveryByScooter("assigned")
+  +changeDeliveryByScooter("started")
+  +updateDeliveryByScooter()
+  +getOrdersFromDelivery()
+  +getScooter()
+}
+
+class CourierDB {
+  +getCourier(userEmail)
+
+}
+
+class DeliveryByScooterDB {
+  +getDeliveryByScooterByEmailCourier("assigned",userEmail)
+  +updateDeliveryByScooter
+}
+
+class DeliveryByScooter {
+  +super(deliveryId)
+  +Integer deliveryByScooterId
+  String status
+  +setStatus("started")
+  +update
+}
+
+class OrderDB {
+  +getOrdersByDeliveryId(deliveryId)
+}
+
+class ScooterDB {
+  +getScooterByemailCourierOnDel(userEmail)
+}
+
+class Courier {
+  -String name
+  -String email
+  -Integer phoneNumber
+  -Integer socialSecurityNumber
+  -Integer nif
+  -String status
+}
+
+
+StartDeliveryUI ..> DeliveryController
+DeliveryController ..> CourierDB
+DeliveryController ..> DeliveryByScooterDB
+DeliveryController ..> DeliveryByScooter
+DeliveryController ..> OrderDB
+DeliveryController ..> ScooterDB
+
+Courier "1" - - "1" DeliveryByScooter : starts >
+
+DeliveryByScooter "*" - - "1" DeliveryByScooterDB : updates >
+
+@enduml
+
+PlantUML version 1.2018.14(Fri Dec 21 16:33:16 GMT 2018)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_251-b08
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+-->
+    </g>
+</svg>

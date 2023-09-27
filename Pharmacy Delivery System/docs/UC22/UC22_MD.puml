@@ -1,0 +1,83 @@
+@startuml
+
+hide methods
+left to right direction
+
+class Platform {
+  -String designation
+}
+class Pharmacy {
+  -String designation
+  -String email
+  -String parkMax
+}
+
+class User {
+  -String name
+  -String email
+  -String password
+}
+
+class Delivery{
+  -int deliveryId
+  -String deliveryStatus
+
+}
+
+class Client {
+  -String name
+  -String email
+  -String creditCardNumber
+  -Date validityDate
+  -Integer ccv
+}
+
+class Product {
+  -String name
+  -String reference
+  -String description
+  -Double price
+  -Integer amount
+}
+
+class Address {
+  -String street
+  -String postalCode
+  -Integer number
+  -String locality
+  -String GPSCoordinates
+}
+
+class Order {
+  -Double fee
+  -Integer credits
+}
+
+class Courier {
+  -String name
+  -String email
+  -Double phoneNumber
+  -Double socialSecurityNumber
+  -Double nif
+  -String status
+}
+
+Platform "1" -- "*" User : has registered >
+Platform "1" -- "*" Client : has registered >
+Platform "1" -- "1" Pharmacy :has registered >
+
+Pharmacy "1" -- "*" Courier : has registered >
+
+Courier "1" -- "*" Delivery : performs a >
+Courier "1" -- "1" User : acts as >
+
+Client "0..1" -- "1" User : act as >
+Client "1" -- "*" Product : buy >
+Client "1" -- "*" Order : performs >
+Client "1" -- "1" Address : has >
+
+Order "1" -- "*" Product : has >
+Order "1" -- "1" Address : has >
+
+Delivery "1"-- "*" Order : has>
+@enduml

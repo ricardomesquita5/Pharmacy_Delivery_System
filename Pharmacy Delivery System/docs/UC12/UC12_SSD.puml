@@ -1,0 +1,11 @@
+@startuml
+autonumber
+actor "Courier" as COU
+
+activate COU
+COU -> ":System" : The Courier parks the scouter in a spot.
+activate ":System"
+":System" --> COU : Sends an email to the Courier with all the information
+deactivate ":System"
+deactivate COU
+@enduml

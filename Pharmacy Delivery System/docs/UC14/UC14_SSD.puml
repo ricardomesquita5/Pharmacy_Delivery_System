@@ -1,0 +1,28 @@
+@startuml
+autonumber
+actor "Administrator" as ADM
+
+activate ADM
+ADM -> ":System" : Starts the process remove product.
+activate ":System"
+":System" --> ADM : Asks the Administrator for the Pharmacy that he wants remove a product.
+deactivate ":System"
+
+ADM -> ":System" : Selects the Pharmacy he wants remove a product.
+activate ":System"
+":System" --> ADM : Asks the Administrator for the product he wants to remove.
+deactivate ":System"
+
+ADM -> ":System" : Selects the product he wants to remove.
+activate ":System"
+":System" --> ADM : Displays the data, requesting confirmation to remove the product.
+deactivate ":System"
+
+ADM -> ":System" :  Confirms.
+activate ":System"
+":System" --> ADM :  Informs about the success of the operation.
+deactivate ":System"
+
+deactivate ADM
+
+@enduml

@@ -1,0 +1,64 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class StartDeliveryUI {
+
+}
+
+class DeliveryController {
+  +getCourierByEmail(userEmail)
+  +getDeliveryByScooter("assigned")
+  +changeDeliveryByScooter("started")
+  +updateDeliveryByScooter()
+  +getOrdersFromDelivery()
+  +getScooter()
+}
+
+class CourierDB {
+  +getCourier(userEmail)
+
+}
+
+class DeliveryByScooterDB {
+  +getDeliveryByScooterByEmailCourier("assigned",userEmail)
+  +updateDeliveryByScooter
+}
+
+class DeliveryByScooter {
+  +super(deliveryId)
+  +Integer deliveryByScooterId
+  String status
+  +setStatus("started")
+  +update
+}
+
+class OrderDB {
+  +getOrdersByDeliveryId(deliveryId)
+}
+
+class ScooterDB {
+  +getScooterByemailCourierOnDel(userEmail)
+}
+
+class Courier {
+  -String name
+  -String email
+  -Integer phoneNumber
+  -Integer socialSecurityNumber
+  -Integer nif
+  -String status
+}
+
+
+StartDeliveryUI ..> DeliveryController
+DeliveryController ..> CourierDB
+DeliveryController ..> DeliveryByScooterDB
+DeliveryController ..> DeliveryByScooter
+DeliveryController ..> OrderDB
+DeliveryController ..> ScooterDB
+
+Courier "1" -- "1" DeliveryByScooter : starts >
+
+DeliveryByScooter "*" -- "1" DeliveryByScooterDB : updates >
+
+@enduml

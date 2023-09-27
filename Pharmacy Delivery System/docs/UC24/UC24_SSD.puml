@@ -1,0 +1,33 @@
+@startuml
+autonumber
+actor "Administrator" as ADM
+
+activate ADM
+ADM -> ":System" : Starts the process update drone
+activate ":System"
+":System" --> ADM : Asks the Administrator for the Pharmacy that he wants update a drone
+deactivate ":System"
+
+ADM -> ":System" : Selects the Pharmacy he wants update a drone.
+activate ":System"
+":System" --> ADM : Asks the Administrator for the drone he wants to update
+deactivate ":System"
+
+ADM -> ":System" : Selects the drone he wants to update
+activate ":System"
+":System" --> ADM : Asks for the necessary drone's data (i.e. capacity (KG), power (W), max battery (W/H))
+deactivate ":System"
+
+ADM -> ":System" : Enters the requested data.
+activate ":System"
+":System" --> ADM : Displays the data, requesting confirmation to update the drone
+deactivate ":System"
+
+ADM -> ":System" :  Confirms
+activate ":System"
+":System" --> ADM :  Informs about the success of the operation
+deactivate ":System"
+
+deactivate ADM
+
+@enduml

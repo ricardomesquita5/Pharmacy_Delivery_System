@@ -1,0 +1,61 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class UpdateDroneUI {
+
+}
+
+class UpdateDroneController {
+  +List<Pharmacy> getPharmaciesList()
+  +getPharmacyByEmail(PharmacyEmail)
+  +List<Drone> getDronesList()
+  +getScoooterByID(droneID)
+  +changeDrone(capacity,power,maxBattery)
+  +updateDrone()
+}
+
+class PharmacyDB {
+  +List<Pharmacy> getAllPharmacies()
+  +Pharmacy getPharmacy(PharmacyEmail)
+}
+
+class DroneDB {
+  +List<Drone> getAllDrones(pharEmail)
+  +getDrone(droneID)
+  +update(scoooter)
+}
+
+class Drone {
+  -String id
+  -Double capacity
+  -Double power
+  -Double maxPower
+  -Integer battery
+  +setCapacity(capacity)
+  +setPower(power)
+  +setMaxBattery(maxBattery)
+}
+
+class Pharmacy {
+  -String designation
+  -Adress adress
+  -Integer parkMax
+  +String getEmail()
+}
+
+class Administrator {
+  -String email
+}
+
+UpdateDroneUI ..> UpdateDroneController
+UpdateDroneController ..> PharmacyDB
+UpdateDroneController ..> Drone
+UpdateDroneController ..> Pharmacy
+
+Administrator "1" --> "*" Drone : add/remove/update
+
+Pharmacy "1" -- "*" Drone : has >
+
+DroneDB "1" -- "*" Drone: updates >
+
+@enduml

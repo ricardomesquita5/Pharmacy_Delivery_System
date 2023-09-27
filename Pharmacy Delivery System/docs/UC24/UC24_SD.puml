@@ -1,0 +1,116 @@
+@startuml
+autonumber
+'hide footbox
+actor "Administrator" as ADM
+
+participant ":UpdateDroneUI" as UI
+participant ":UpdateController" as CTRL
+participant ":PharmacyDB" as PHARDB
+participant ":Drone" as DRONE
+participant "phar\n:Pharmacy" as PHAR
+participant "drone\n:Drone" as ODRONE
+participant ":DroneDB" as DRONEDB
+participant "pharmaciesList\n:List<Pharmacy>" as LPHAR
+participant "dronesList\n:List<Drone>" as LDRONE
+
+activate ADM
+ADM -> UI : Starts the process update Drone.
+activate UI
+
+UI -> CTRL : pharmaciesList = getPharmaciesList()
+activate CTRL
+
+CTRL -> PHARDB: pharmaciesList = geAllPharmacies()
+activate PHARDB
+deactivate PHARDB
+
+deactivate CTRL
+
+UI -> ADM : Shows to the Administrator a list of pharmacies and asks him to choose the one he wants update a drone.
+deactivate UI
+
+ADM -> UI : Selects the Pharmacy he wants update a drone.
+activate UI
+
+UI -> CTRL : getPharmacyByEmail(PharmacyEmail)
+activate CTRL
+
+CTRL -> PHARDB: phar = getPharmacy(PharmacyEmail)
+activate PHARDB
+deactivate PHARDB
+
+deactivate CTRL
+
+UI -> CTRL: dronesList = getDronesList()
+activate CTRL
+
+CTRL -> PHAR: pharEmail = getEmail()
+activate PHAR
+deactivate PHAR
+
+CTRL -> DRONEDB: dronesList = geAllDrones(pharEmail)
+activate DRONEDB
+deactivate DRONEDB
+
+deactivate CTRL
+
+UI -> ADM : Shows to the Administrator a list of drones and asks him to choose the one he wants update.
+deactivate UI
+
+ADM -> UI : Selects the drone he wants update.
+activate UI
+
+UI -> CTRL : getDroneByID(droneID)
+activate CTRL
+
+CTRL -> DRONEDB: drone = getDrone(droneID)
+activate DRONEDB
+deactivate DRONEDB
+
+deactivate CTRL
+
+UI --> ADM : Asks for the necessary drone's data (i.e. capacity (KG), power (W), max battery (W/H)).
+deactivate UI
+
+ADM -> UI : Enters the requested data.
+activate UI
+
+UI -> CTRL: changeDrone(capacity,power,maxBattery)
+activate CTRL
+
+CTRL -> ODRONE : setCapacity(Capacity)
+activate ODRONE
+deactivate ODRONE
+CTRL -> ODRONE : setPower(power)
+activate ODRONE
+deactivate ODRONE
+CTRL -> ODRONE : setMaxBattery(maxBattery)
+activate ODRONE
+deactivate ODRONE
+
+deactivate CTRL
+
+UI -> ADM:  Displays the data, requesting confirmation to update the drone.
+deactivate CTRL
+deactivate UI
+
+ADM -> UI : Confirms
+activate UI
+UI -> CTRL : updateDrone()
+activate CTRL
+
+CTRL -> ODRONE : update()
+activate ODRONE
+
+ODRONE -> DRONEDB : update(drone)
+activate DRONEDB
+deactivate DRONEDB
+deactivate ODRONE
+
+UI -> ADM : Informs about the success of the operation
+deactivate CTRL
+deactivate UI
+
+deactivate ADM
+
+@enduml

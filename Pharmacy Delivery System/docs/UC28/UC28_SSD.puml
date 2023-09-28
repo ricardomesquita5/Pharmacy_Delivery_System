@@ -1,0 +1,12 @@
+@startuml
+autonumber
+actor "System" as SIS
+
+activate SIS
+SIS -> ":System" : Starts the process of automatically Parking a Drone
+activate ":System"
+":System" --> SIS : Verifies if the drone is parked and notifies the client with an email when it is about to start a delivery.
+deactivate ":System"
+
+deactivate SIS
+@enduml

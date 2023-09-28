@@ -1,0 +1,27 @@
+@startuml
+
+hide methods
+left to right direction
+
+class Platform {
+  -String designation
+}
+
+class Administrator {
+  -String name
+  -String email
+}
+
+class Drone {
+  -Integer id
+  -Double capacity
+  -Double power
+  -Double maxBattery
+  -Integer battery
+}
+
+Platform "1" -- "*" Administrator : has registered >
+
+Administrator "1" -- "*" Drone : add/remove/update >
+
+@enduml

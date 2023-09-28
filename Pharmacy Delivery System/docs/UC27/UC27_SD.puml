@@ -1,0 +1,96 @@
+@startuml
+autonumber
+actor "Administrator" as ADM
+
+participant ":RemoveDroneUI" as UI
+participant ":RemoveDroneController" as CTRL
+participant ":PharmacyDB" as PHARDB
+participant ":Drone" as SCOOTER
+participant "phar\n:Pharmacy" as PHAR
+participant "drone\n:Drone" as OSCOOTER
+participant ":DroneDB" as SCOOTERDB
+participant "pharmaciesList\n:List<Pharmacy>" as LPHAR
+participant "dronesList\n:List<Drone>" as LSCOOTER
+
+activate ADM
+ADM -> UI : Starts the process remove Drone.
+activate UI
+
+UI -> CTRL : pharmaciesList = getPharmaciesList()
+activate CTRL
+
+CTRL -> PHARDB: pharmaciesList = geAllPharmacies()
+activate PHARDB
+deactivate PHARDB
+
+deactivate CTRL
+
+UI -> ADM : Shows to the Administrator a list of pharmacies and asks him to choose the one he wants remove a drone.
+deactivate UI
+
+ADM -> UI : Selects the Pharmacy he wants remove a drone.
+activate UI
+
+UI -> CTRL : getPharmacyByEmail(PharmacyEmail)
+activate CTRL
+
+CTRL -> PHARDB: phar = getPharmacy(PharmacyEmail)
+activate PHARDB
+deactivate PHARDB
+
+deactivate CTRL
+
+UI -> CTRL: dronesList = getDronesList()
+activate CTRL
+
+CTRL -> PHAR: pharEmail = getEmail()
+activate PHAR
+deactivate PHAR
+
+CTRL -> SCOOTERDB: dronesList = geAllDrones(pharEmail)
+activate SCOOTERDB
+deactivate SCOOTERDB
+
+deactivate CTRL
+
+UI -> ADM : Shows to the Administrator a list of drones and asks him to choose the one he wants remove.
+deactivate UI
+
+ADM -> UI : Selects the drone he wants remove.
+activate UI
+
+UI -> CTRL : getDroneByID(droneID)
+activate CTRL
+
+CTRL -> SCOOTERDB: drone = getDrone(droneID)
+activate SCOOTERDB
+deactivate SCOOTERDB
+
+deactivate CTRL
+
+UI -> ADM:  Displays the data, requesting confirmation to remove the drone.
+deactivate CTRL
+deactivate UI
+
+ADM -> UI : Confirms
+activate UI
+UI -> CTRL : removeDrone()
+activate CTRL
+
+CTRL -> OSCOOTER : remove()
+activate OSCOOTER
+
+OSCOOTER -> OSCOOTER : droneID = getID()
+
+OSCOOTER -> SCOOTERDB : remove(droneID)
+activate SCOOTERDB
+deactivate SCOOTERDB
+deactivate OSCOOTER
+
+UI -> ADM : Informs about the success of the operation
+deactivate CTRL
+deactivate UI
+
+deactivate ADM
+
+@enduml

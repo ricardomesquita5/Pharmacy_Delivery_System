@@ -1,0 +1,8 @@
+lapr.project.controller
+lapr.project.data
+lapr.project.graphbase
+lapr.project.model
+lapr.project.ui
+lapr.project.utils.authorization
+lapr.project.utils.authorization.model
+lapr.project.utils.controller

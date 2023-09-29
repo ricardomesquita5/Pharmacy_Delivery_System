@@ -1,0 +1,167 @@
+@startuml
+autonumber
+'hide footbox
+actor "Courier" as COU
+
+participant ":FinishDeliveryUI" as UI
+participant ":DeliveryController" as CTRL
+participant ":CourierDB" as CDB
+participant ":DeliveryByScooterDB" as DSCOODB
+participant ":SpotDB" as SPOTDB
+participant ":DeliveryByScooter" as DSCOO
+participant ":Vehicle" as VE
+participant ":ScooterDB"  as SDB
+participant ":Courier" as COURIER
+participant "spotList\n:List<Spot>" as LIST
+participant "spot\n:Spot" as SPOT
+
+activate COU
+COU -> UI : Starts the process of finishing a delivery
+activate UI
+
+UI -> CTRL : getCourierByEmail(userEmail)
+activate CTRL
+
+CTRL -> CDB: getCourier(userEmail)
+activate CDB
+deactivate CDB
+
+deactivate CTRL
+
+UI --> CTRL : getDeliveryByScooter("started")
+activate CTRL
+
+CTRL --> DSCOODB :getDeliveryByScooterByEmailCourier("started",userEmail)
+activate DSCOODB
+deactivate DSCOODB
+
+deactivate CTRL
+
+UI --> CTRL : getEmailPharmacy()
+activate CTRL
+
+CTRL --> CDB : email=getEmailPharmacyByEmailCourier(userEmail)
+activate CDB
+deactivate CDB
+
+deactivate CTRL
+
+UI --> CTRL : spotList=getAvailableSpots(email)
+activate CTRL
+
+CTRL -->SPOTDB : getAvailableSpots()
+activate SPOTDB
+deactivate SPOTDB
+
+deactivate CTRL
+
+UI -> COU : Shows a list of available scooter spots and asks the courier to choose one of them
+deactivate UI
+
+COU -> UI : Chooses the spot he wants to park the scooter in
+activate UI
+
+
+UI --> CTRL : getScooter()
+activate CTRL
+
+CTRL --> DSCOODB : getScooterByemailCourierOnDel(userEmail)
+activate DSCOODB
+deactivate DSCOODB
+
+deactivate CTRL
+
+UI --> CTRL : getSpot(idSpot,idPark)
+activate CTRL
+
+CTRL --> SPOTDB : getSpot(idSpot,idPark)
+activate SPOTDB
+deactivate SPOTDB
+
+deactivate CTRL
+
+UI --> CTRL : battery=getBatteryScooter()
+activate CTRL
+deactivate CTRL
+
+UI --> CTRL : changeScooter(battery)
+activate CTRL
+
+CTRL --> VE : setBattery(battery)
+activate VE
+deactivate VE
+
+deactivate CTRL
+
+UI --> CTRL : updateScooter()
+activate CTRL
+
+CTRL --> SDB : updatScooterBattery(battery,id)
+activate SDB
+deactivate SDB
+
+deactivate CTRL
+
+UI --> CTRL : changeCourier("available")
+activate CTRL
+
+CTRL --> COURIER : setStatus("available")
+activate COURIER
+deactivate COURIER
+
+deactivate CTRL
+
+UI --> CTRL : updateCourier()
+activate CTRL
+
+CTRL --> COURIER : update()
+activate COURIER
+
+COURIER --> CDB : updateCourier()
+activate CDB
+deactivate CDB
+
+deactivate COURIER
+
+deactivate CTRL
+
+UI --> CTRL : updateSpot(true,scooter)
+activate CTRL
+
+CTRL --> SPOTDB: updateSpot(id,idPark,idScooter)
+activate SPOTDB
+deactivate SPOTDB
+
+deactivate CTRL
+
+UI --> CTRL : changeDeliveryByScooter("finished")
+activate CTRL
+
+CTRL --> DSCOO : setStatus("finished")
+activate DSCOO
+deactivate DSCOO
+
+deactivate CTRL
+
+UI --> CTRL : updateDeliveryByScooter()
+activate CTRL
+
+CTRL --> DSCOO : update()
+activate DSCOO
+
+DSCOO --> DSCOODB : updateDeliveryByScooter()
+activate DSCOODB
+deactivate DSCOODB
+
+deactivate DSCOO
+
+deactivate CTRL
+
+
+UI -> COU : Informs the courier of the success of the operation
+
+deactivate UI
+deactivate COU
+
+
+@enduml

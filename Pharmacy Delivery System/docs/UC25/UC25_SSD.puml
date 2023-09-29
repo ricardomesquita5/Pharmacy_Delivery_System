@@ -1,0 +1,15 @@
+@startuml
+autonumber
+actor "Courier" as COU
+
+activate COU
+COU -> ":System" : Starts the process of finishing a delivery
+activate ":System"
+":System" --> COU : Shows a list of available scooter spots and asks the courier to choose one of them
+deactivate ":System"
+COU -> ":System" : Chooses the spot he wants to park the scooter in
+activate ":System"
+":System" --> COU : Informs the courier of the success of the operation
+deactivate ":System"
+deactivate COU
+@enduml

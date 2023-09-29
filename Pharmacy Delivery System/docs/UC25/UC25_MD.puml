@@ -1,0 +1,53 @@
+@startuml
+
+hide methods
+left to right direction
+
+class Platform {
+  -String designation
+}
+
+class Scooter {
+  -String id
+  -Double capacity
+  -Double power
+  -Integer battery
+  -Boolean isCharching
+  -Boolean isParked
+}
+
+class Courier {
+  -String name
+  -String email
+  -Integer phoneNumber
+  -Integer socialSecurityNumber
+  -Integer nif
+  -String status
+}
+
+class User {
+  -String name
+  -String email
+  -String password
+}
+
+class Delivery{
+  -Integer idDelivery
+}
+
+class Spot{
+
+}
+
+Courier "0..1" -- "1" User : act as >
+Courier "1" -- "*" Delivery :performs >
+
+Platform "1" -- "*" Courier : has registered >
+
+Delivery "1" -- "1"Scooter : has >
+
+Courier "1" -- "1" Spot : parks in >
+
+Scooter "1" -- "1" Spot : is parked in >
+
+@enduml

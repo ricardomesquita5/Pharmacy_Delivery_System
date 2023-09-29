@@ -1,0 +1,88 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class FinishDeliveryUI {
+
+}
+
+class DeliveryController {
+  +getCourierByEmail(userEmail)
+  +getDeliveryByScooter("started")
+  +getEmailPharmacy()
+  +getAvailableSpots(email)
+  +getScooter()
+  +getSpot(idSpot,idPark)
+  +getBatteryScooter()
+  +changeScooter(battery)
+  +updateScooter()
+  +changeCourier("available")
+  +updateCourier()
+  +updateSpot(true,scooter)
+  +changeDeliveryByScooter("finished")
+  +updateDeliveryByScooter()
+
+}
+
+class CourierDB {
+  +getCourier(userEmail)
+  +email=getEmailPharmacyByEmailCourier(userEmail)
+  +updateCourier()
+}
+
+class DeliveryByScooterDB {
+  +getDeliveryByScooterByEmailCourier("started",userEmail)
+  +getScooterByemailCourierOnDel(userEmail)
+  +updateDeliveryByScooter()
+}
+
+class SpotDB{
+  +getAvailableSpots()
+  +getSpot(idSpot,idPark)
+  +updateSpot(id,idPark,idScooter)
+}
+
+class DeliveryByScooter {
+  -super(deliveryId)
+  -Integer deliveryByScooterId
+  -String status
+  +setStatus("finished")
+  +update()
+
+}
+
+class Vehicle{
+  +setBattery(battery)
+}
+
+class ScooterDB {
+  +updatScooterBattery(battery,id)
+}
+
+class Courier {
+  -String name
+  -String email
+  -Integer phoneNumber
+  -Integer socialSecurityNumber
+  -Integer nif
+  -String status
+  +setStatus("available")
+  +update()
+}
+
+
+FinishDeliveryUI ..> DeliveryController
+DeliveryController ..> CourierDB
+DeliveryController ..> DeliveryByScooterDB
+DeliveryController ..> DeliveryByScooter
+DeliveryController ..>SpotDB
+DeliveryController ..> ScooterDB
+DeliveryController ..> Vehicle
+DeliveryController ..> Courier
+
+Courier "1" -- "1" DeliveryByScooter : finishes >
+
+CourierDB "1" -- "*" Courier : updates >
+
+DeliveryByScooterDB "1" -- "*" DeliveryByScooter : updates >
+
+@enduml
